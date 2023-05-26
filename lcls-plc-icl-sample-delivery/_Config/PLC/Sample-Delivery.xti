@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.35" ClassName="CNestedPlcProjDef">
+	<DataTypes>
+		<DataType>
+			<Name GUID="{18071995-0000-0000-0000-000000000041}" TcBaseType="true" HideSubItems="true" CName="AmsNetId">AMSNETID</Name>
+			<BitSize>48</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000001}">BYTE</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>6</Elements>
+			</ArrayInfo>
+			<Format>
+				<Printf>%d.%d.%d.%d.%d.%d</Printf>
+				<Parameter>[0]</Parameter>
+				<Parameter>[1]</Parameter>
+				<Parameter>[2]</Parameter>
+				<Parameter>[3]</Parameter>
+				<Parameter>[4]</Parameter>
+				<Parameter>[5]</Parameter>
+			</Format>
+		</DataType>
+		<DataType>
+			<Name GUID="{5DF516C6-FC40-1863-063A-424C4395E211}" Namespace="lcls_twincat_sample_delivery.Tc2_SerialCom" AutoDeleteType="true">EL6inData22B</Name>
+			<Comment><![CDATA[ This data type is corresponding to the
+   EL-6xxx data structure used in the
+   TwinCAT SystemManager
+   (EL-6xxx version using 22 data bytes) 
+]]></Comment>
+			<BitSize>192</BitSize>
+			<SubItem>
+				<Name>Status</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000004}">WORD</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000001}">BYTE</Type>
+				<ArrayInfo>
+					<LBound>0</LBound>
+					<Elements>22</Elements>
+				</ArrayInfo>
+				<BitSize>176</BitSize>
+				<BitOffs>16</BitOffs>
+			</SubItem>
+		</DataType>
+		<DataType>
+			<Name GUID="{D4C342C3-D548-F003-F1A1-B17AAAA14625}" Namespace="lcls_twincat_sample_delivery.Tc2_SerialCom" AutoDeleteType="true">EL6outData22B</Name>
+			<Comment><![CDATA[ This data type is corresponding to the
+   EL-6xxx data structure used in the
+   TwinCAT SystemManager
+   (EL-6xxx version using 22 data bytes) 
+]]></Comment>
+			<BitSize>192</BitSize>
+			<SubItem>
+				<Name>Ctrl</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000004}">WORD</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000001}">BYTE</Type>
+				<ArrayInfo>
+					<LBound>0</LBound>
+					<Elements>22</Elements>
+				</ArrayInfo>
+				<BitSize>176</BitSize>
+				<BitOffs>16</BitOffs>
+			</SubItem>
+		</DataType>
+	</DataTypes>
+	<Project GUID="{D3F54924-9309-41B8-AD79-712278992990}" Name="Sample-Delivery" PrjFilePath="..\..\Sample-Delivery\Sample-Delivery.plcproj" TmcFilePath="..\..\Sample-Delivery\Sample-Delivery.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{3B16FF83-F672-29AD-8A0A-319D43B8ECA7}">
+			<Name>Sample-Delivery Instance</Name>
+			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
+			<Vars VarGrpType="1">
+				<Name>PlcTask Inputs</Name>
+				<Var>
+					<Name>lcls_twincat_sample_delivery.LCLS_General.DefaultGlobals.stSys.I_EcatMaster1</Name>
+					<Comment><![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]></Comment>
+					<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
+				</Var>
+				<Var>
+					<Name>MAIN.fbSelectorA.stBaseIO.i_SyncUnitWC</Name>
+					<Comment><![CDATA[ This structure should be used as a basis for M3 arch. IO clusters.
+    Will stash stuff like ethercat diagnostics and other general purpose stuff 
+WC bit tells you if the sync unit is OK, which tells you if cluster is alive]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>MAIN.fbSelectorA.stViciSerial.stComIn</Name>
+					<Type GUID="{5DF516C6-FC40-1863-063A-424C4395E211}" Namespace="lcls_twincat_sample_delivery.Tc2_SerialCom">EL6inData22B</Type>
+				</Var>
+				<Var>
+					<Name>MAIN.fbSelectorA.stSensSerial.stComIn</Name>
+					<Type GUID="{5DF516C6-FC40-1863-063A-424C4395E211}" Namespace="lcls_twincat_sample_delivery.Tc2_SerialCom">EL6inData22B</Type>
+				</Var>
+			</Vars>
+			<Vars VarGrpType="2" AreaNo="1">
+				<Name>PlcTask Outputs</Name>
+				<Var>
+					<Name>MAIN.fbSelectorA.stShaker01.q_xPwrDO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>MAIN.fbSelectorA.stShaker02.q_xPwrDO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>MAIN.fbSelectorA.stShaker03.q_xPwrDO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>MAIN.fbSelectorA.stShaker04.q_xPwrDO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>MAIN.fbSelectorA.stViciSerial.stComOut</Name>
+					<Type GUID="{D4C342C3-D548-F003-F1A1-B17AAAA14625}" Namespace="lcls_twincat_sample_delivery.Tc2_SerialCom">EL6outData22B</Type>
+				</Var>
+				<Var>
+					<Name>MAIN.fbSelectorA.stSensSerial.stComOut</Name>
+					<Type GUID="{D4C342C3-D548-F003-F1A1-B17AAAA14625}" Namespace="lcls_twincat_sample_delivery.Tc2_SerialCom">EL6outData22B</Type>
+				</Var>
+			</Vars>
+			<Contexts>
+				<Context>
+					<Id NeedCalleeCall="true">0</Id>
+					<Name>PlcTask</Name>
+					<ManualConfig>
+						<OTCID>#x02010030</OTCID>
+					</ManualConfig>
+					<Priority>20</Priority>
+					<CycleTime>10000000</CycleTime>
+				</Context>
+			</Contexts>
+			<TaskPouOids>
+				<TaskPouOid Prio="20" OTCID="#x08502001"/>
+			</TaskPouOids>
+		</Instance>
+	</Project>
+	<Mappings>
+		<OwnerA Name="Sample-Delivery Instance">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Box 3 (EP9128-0021)^Term 5 (EP9128-2021)^M3 Selector A Digital IO (EP2338-1001)">
+				<Link VarA="PlcTask Outputs^MAIN.fbSelectorA.stShaker01.q_xPwrDO" VarB="Channel 9^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^MAIN.fbSelectorA.stShaker02.q_xPwrDO" VarB="Channel 10^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^MAIN.fbSelectorA.stShaker03.q_xPwrDO" VarB="Channel 11^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^MAIN.fbSelectorA.stShaker04.q_xPwrDO" VarB="Channel 12^Output" AutoLink="true" Size="1"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Box 3 (EP9128-0021)^Term 5 (EP9128-2021)^M3 Selector A Serial IO (EP6002-0002)">
+				<Link VarA="PlcTask Inputs^MAIN.fbSelectorA.stSensSerial.stComIn^Status" VarB="COM TxPDO-Map Inputs Channel 1^Status" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^MAIN.fbSelectorA.stViciSerial.stComIn^Status" VarB="COM TxPDO-Map Inputs Channel 2^Status" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^MAIN.fbSelectorA.stSensSerial.stComOut^Ctrl" VarB="COM RxPDO-Map Outputs Channel 1^Ctrl" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^MAIN.fbSelectorA.stViciSerial.stComOut^Ctrl" VarB="COM RxPDO-Map Outputs Channel 2^Ctrl" AutoLink="true"/>
+			</OwnerB>
+		</OwnerA>
+	</Mappings>
+</TcSmItem>
