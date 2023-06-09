@@ -70,13 +70,13 @@ record(longin, "$(PREFIX)LCLSGeneral:LogMessageCount_RBV") {
   info(archive, "VAL")
 }
 
-record(mbbi, "TST:ICL:SEL:A:Sensirion:01:State_RBV") {
-  field(DESC, "MAIN.fbSelectorA.astSelFM[1].eFMState")
+record(mbbi, "ICL:SDS:SEL:A:Sensirion:01:State_RBV") {
+  field(DESC, "GVL_SDS.fbSelectorA.astSelFM[1].eFMState")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.astSelFM[1].eFMState?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.astSelFM[1].eFMState?")
   field(ZRVL, "0")
   field(ONVL, "1")
   field(TWVL, "2")
@@ -89,112 +89,116 @@ record(mbbi, "TST:ICL:SEL:A:Sensirion:01:State_RBV") {
   info(archive, "VAL")
 }
 
-record(ai, "TST:ICL:SEL:A:Sensirion:01:Flow_RBV") {
-  field(DESC, "MAIN.fbSelectorA.astSelFM[1].rFlow")
+record(ai, "ICL:SDS:SEL:A:Sensirion:01:Flow_RBV") {
+  field(DESC, "GVL_SDS.fbSelectorA.astSelFM[1].rFlow")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.astSelFM[1].rFlow?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.astSelFM[1].rFlow?")
   field(PREC, "3")
   info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
   info(archive, "VAL")
 }
 
-record(bi, "TST:ICL:SEL:A:Sensirion:01:ModeRb_RBV") {
-  field(DESC, "MAIN.fbSelectorA.astSelFM[1].xFMModeRb")
+record(bi, "ICL:SDS:SEL:A:Sensirion:01:ModeRb_RBV") {
+  # GVL_SDS.fbSelectorA.astSelFM[1].xFMModeRb
+  field(DESC, "GVL_SDS.fbSelectorA....elFM[1].xFMModeRb")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.astSelFM[1].xFMModeRb?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.astSelFM[1].xFMModeRb?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
   info(archive, "VAL")
 }
 
-record(bi, "TST:ICL:SEL:A:Sensirion:01:Mode_RBV") {
-  field(DESC, "MAIN.fbSelectorA.astSelFM[1].xFMModeReq")
+record(bi, "ICL:SDS:SEL:A:Sensirion:01:Mode_RBV") {
+  # GVL_SDS.fbSelectorA.astSelFM[1].xFMModeReq
+  field(DESC, "GVL_SDS.fbSelectorA....lFM[1].xFMModeReq")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.astSelFM[1].xFMModeReq?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.astSelFM[1].xFMModeReq?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
   info(archive, "VAL")
 }
 
-record(bo, "TST:ICL:SEL:A:Sensirion:01:Mode") {
-  field(DESC, "MAIN.fbSelectorA.astSelFM[1].xFMModeReq")
+record(bo, "ICL:SDS:SEL:A:Sensirion:01:Mode") {
+  # GVL_SDS.fbSelectorA.astSelFM[1].xFMModeReq
+  field(DESC, "GVL_SDS.fbSelectorA....lFM[1].xFMModeReq")
   field(DTYP, "asynInt32")
   field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.fbSelectorA.astSelFM[1].xFMModeReq=")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SDS.fbSelectorA.astSelFM[1].xFMModeReq=")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
   info(archive, "VAL")
 }
 
-record(bi, "TST:ICL:SEL:A:Sensirion:01:OoR_RBV") {
-  field(DESC, "MAIN.fbSelectorA.astSelFM[1].xFMOoR")
+record(bi, "ICL:SDS:SEL:A:Sensirion:01:OoR_RBV") {
+  field(DESC, "GVL_SDS.fbSelectorA.astSelFM[1].xFMOoR")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.astSelFM[1].xFMOoR?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.astSelFM[1].xFMOoR?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
   info(archive, "VAL")
 }
 
-record(bi, "TST:ICL:SEL:A:Sensirion:01:Reset_RBV") {
-  field(DESC, "MAIN.fbSelectorA.astSelFM[1].xFMReset")
+record(bi, "ICL:SDS:SEL:A:Sensirion:01:Reset_RBV") {
+  field(DESC, "GVL_SDS.fbSelectorA.astSelFM[1].xFMReset")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.astSelFM[1].xFMReset?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.astSelFM[1].xFMReset?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
   info(archive, "VAL")
 }
 
-record(bo, "TST:ICL:SEL:A:Sensirion:01:Reset") {
-  field(DESC, "MAIN.fbSelectorA.astSelFM[1].xFMReset")
+record(bo, "ICL:SDS:SEL:A:Sensirion:01:Reset") {
+  field(DESC, "GVL_SDS.fbSelectorA.astSelFM[1].xFMReset")
   field(DTYP, "asynInt32")
   field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.fbSelectorA.astSelFM[1].xFMReset=")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SDS.fbSelectorA.astSelFM[1].xFMReset=")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
   info(archive, "VAL")
 }
 
-record(bi, "TST:ICL:SEL:A:Sensirion:01:FlowValid_RBV") {
-  field(DESC, "MAIN.fbSelectorA.astSelFM[1].xFlowValid")
+record(bi, "ICL:SDS:SEL:A:Sensirion:01:FlowValid_RBV") {
+  # GVL_SDS.fbSelectorA.astSelFM[1].xFlowValid
+  field(DESC, "GVL_SDS.fbSelectorA....lFM[1].xFlowValid")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.astSelFM[1].xFlowValid?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.astSelFM[1].xFlowValid?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
   info(archive, "VAL")
 }
 
-record(mbbi, "TST:ICL:SEL:A:Sensirion:02:State_RBV") {
-  field(DESC, "MAIN.fbSelectorA.astSelFM[2].eFMState")
+record(mbbi, "ICL:SDS:SEL:A:Sensirion:02:State_RBV") {
+  field(DESC, "GVL_SDS.fbSelectorA.astSelFM[2].eFMState")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.astSelFM[2].eFMState?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.astSelFM[2].eFMState?")
   field(ZRVL, "0")
   field(ONVL, "1")
   field(TWVL, "2")
@@ -207,245 +211,257 @@ record(mbbi, "TST:ICL:SEL:A:Sensirion:02:State_RBV") {
   info(archive, "VAL")
 }
 
-record(ai, "TST:ICL:SEL:A:Sensirion:02:Flow_RBV") {
-  field(DESC, "MAIN.fbSelectorA.astSelFM[2].rFlow")
+record(ai, "ICL:SDS:SEL:A:Sensirion:02:Flow_RBV") {
+  field(DESC, "GVL_SDS.fbSelectorA.astSelFM[2].rFlow")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.astSelFM[2].rFlow?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.astSelFM[2].rFlow?")
   field(PREC, "3")
   info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
   info(archive, "VAL")
 }
 
-record(bi, "TST:ICL:SEL:A:Sensirion:02:ModeRb_RBV") {
-  field(DESC, "MAIN.fbSelectorA.astSelFM[2].xFMModeRb")
+record(bi, "ICL:SDS:SEL:A:Sensirion:02:ModeRb_RBV") {
+  # GVL_SDS.fbSelectorA.astSelFM[2].xFMModeRb
+  field(DESC, "GVL_SDS.fbSelectorA....elFM[2].xFMModeRb")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.astSelFM[2].xFMModeRb?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.astSelFM[2].xFMModeRb?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
   info(archive, "VAL")
 }
 
-record(bi, "TST:ICL:SEL:A:Sensirion:02:Mode_RBV") {
-  field(DESC, "MAIN.fbSelectorA.astSelFM[2].xFMModeReq")
+record(bi, "ICL:SDS:SEL:A:Sensirion:02:Mode_RBV") {
+  # GVL_SDS.fbSelectorA.astSelFM[2].xFMModeReq
+  field(DESC, "GVL_SDS.fbSelectorA....lFM[2].xFMModeReq")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.astSelFM[2].xFMModeReq?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.astSelFM[2].xFMModeReq?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
   info(archive, "VAL")
 }
 
-record(bo, "TST:ICL:SEL:A:Sensirion:02:Mode") {
-  field(DESC, "MAIN.fbSelectorA.astSelFM[2].xFMModeReq")
+record(bo, "ICL:SDS:SEL:A:Sensirion:02:Mode") {
+  # GVL_SDS.fbSelectorA.astSelFM[2].xFMModeReq
+  field(DESC, "GVL_SDS.fbSelectorA....lFM[2].xFMModeReq")
   field(DTYP, "asynInt32")
   field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.fbSelectorA.astSelFM[2].xFMModeReq=")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SDS.fbSelectorA.astSelFM[2].xFMModeReq=")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
   info(archive, "VAL")
 }
 
-record(bi, "TST:ICL:SEL:A:Sensirion:02:OoR_RBV") {
-  field(DESC, "MAIN.fbSelectorA.astSelFM[2].xFMOoR")
+record(bi, "ICL:SDS:SEL:A:Sensirion:02:OoR_RBV") {
+  field(DESC, "GVL_SDS.fbSelectorA.astSelFM[2].xFMOoR")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.astSelFM[2].xFMOoR?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.astSelFM[2].xFMOoR?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
   info(archive, "VAL")
 }
 
-record(bi, "TST:ICL:SEL:A:Sensirion:02:Reset_RBV") {
-  field(DESC, "MAIN.fbSelectorA.astSelFM[2].xFMReset")
+record(bi, "ICL:SDS:SEL:A:Sensirion:02:Reset_RBV") {
+  field(DESC, "GVL_SDS.fbSelectorA.astSelFM[2].xFMReset")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.astSelFM[2].xFMReset?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.astSelFM[2].xFMReset?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
   info(archive, "VAL")
 }
 
-record(bo, "TST:ICL:SEL:A:Sensirion:02:Reset") {
-  field(DESC, "MAIN.fbSelectorA.astSelFM[2].xFMReset")
+record(bo, "ICL:SDS:SEL:A:Sensirion:02:Reset") {
+  field(DESC, "GVL_SDS.fbSelectorA.astSelFM[2].xFMReset")
   field(DTYP, "asynInt32")
   field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.fbSelectorA.astSelFM[2].xFMReset=")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SDS.fbSelectorA.astSelFM[2].xFMReset=")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
   info(archive, "VAL")
 }
 
-record(bi, "TST:ICL:SEL:A:Sensirion:02:FlowValid_RBV") {
-  field(DESC, "MAIN.fbSelectorA.astSelFM[2].xFlowValid")
+record(bi, "ICL:SDS:SEL:A:Sensirion:02:FlowValid_RBV") {
+  # GVL_SDS.fbSelectorA.astSelFM[2].xFlowValid
+  field(DESC, "GVL_SDS.fbSelectorA....lFM[2].xFlowValid")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.astSelFM[2].xFlowValid?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.astSelFM[2].xFlowValid?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
   info(archive, "VAL")
 }
 
-record(bi, "TST:ICL:SEL:A:IO:SyncUnitOK_RBV") {
-  field(DESC, "MAIN.fbSelectorA.stBaseIO.i_SyncUnitWC")
+record(bi, "ICL:SDS:SEL:A:IO:SyncUnitOK_RBV") {
+  # GVL_SDS.fbSelectorA.stBaseIO.i_SyncUnitWC
+  field(DESC, "GVL_SDS.fbSelectorA....seIO.i_SyncUnitWC")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.stBaseIO.i_SyncUnitWC?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.stBaseIO.i_SyncUnitWC?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
   info(archive, "VAL")
 }
 
-record(longin, "TST:ICL:SEL:A:Valve:01:CurrentPos_RBV") {
-  # MAIN.fbSelectorA.stSelector.astViciVlvStatus[1].iCurrPos
-  field(DESC, "MAIN.fbSelectorA.stS...tatus[1].iCurrPos")
+record(longin, "ICL:SDS:SEL:A:Valve:01:CurrentPos_RBV") {
+  # GVL_SDS.fbSelectorA.stSelector.astViciVlvStatus[1].iCurrPos
+  field(DESC, "GVL_SDS.fbSelectorA....tatus[1].iCurrPos")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.stSelector.astViciVlvStatus[1].iCurrPos?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.stSelector.astViciVlvStatus[1].iCurrPos?")
   info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
   info(archive, "VAL")
 }
 
-record(longin, "TST:ICL:SEL:A:Valve:02:CurrentPos_RBV") {
-  # MAIN.fbSelectorA.stSelector.astViciVlvStatus[2].iCurrPos
-  field(DESC, "MAIN.fbSelectorA.stS...tatus[2].iCurrPos")
+record(longin, "ICL:SDS:SEL:A:Valve:02:CurrentPos_RBV") {
+  # GVL_SDS.fbSelectorA.stSelector.astViciVlvStatus[2].iCurrPos
+  field(DESC, "GVL_SDS.fbSelectorA....tatus[2].iCurrPos")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.stSelector.astViciVlvStatus[2].iCurrPos?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.stSelector.astViciVlvStatus[2].iCurrPos?")
   info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
   info(archive, "VAL")
 }
 
-record(longin, "TST:ICL:SEL:A:ValveSyncReqPos_RBV") {
-  field(DESC, "MAIN.fbSelectorA.stSelector.iSyncReqPos")
+record(longin, "ICL:SDS:SEL:A:ValveSyncReqPos_RBV") {
+  # GVL_SDS.fbSelectorA.stSelector.iSyncReqPos
+  field(DESC, "GVL_SDS.fbSelectorA....ector.iSyncReqPos")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.stSelector.iSyncReqPos?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.stSelector.iSyncReqPos?")
   info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
   info(archive, "VAL")
 }
 
-record(longout, "TST:ICL:SEL:A:ValveSyncReqPos") {
-  field(DESC, "MAIN.fbSelectorA.stSelector.iSyncReqPos")
+record(longout, "ICL:SDS:SEL:A:ValveSyncReqPos") {
+  # GVL_SDS.fbSelectorA.stSelector.iSyncReqPos
+  field(DESC, "GVL_SDS.fbSelectorA....ector.iSyncReqPos")
   field(DTYP, "asynInt32")
   field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.fbSelectorA.stSelector.iSyncReqPos=")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SDS.fbSelectorA.stSelector.iSyncReqPos=")
   info(autosaveFields_pass0, "DESC DISS DRVH DRVL HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS VAL")
   info(archive, "VAL")
 }
 
-record(longin, "TST:ICL:SEL:A:ValveSyncCurrentPos_RBV") {
-  field(DESC, "MAIN.fbSelectorA.stSelector.iSyncResPos")
+record(longin, "ICL:SDS:SEL:A:ValveSyncCurrentPos_RBV") {
+  # GVL_SDS.fbSelectorA.stSelector.iSyncResPos
+  field(DESC, "GVL_SDS.fbSelectorA....ector.iSyncResPos")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.stSelector.iSyncResPos?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.stSelector.iSyncResPos?")
   info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
   info(archive, "VAL")
 }
 
-record(longin, "TST:ICL:SEL:A:Valve:01:ReqPos_RBV") {
-  field(DESC, "MAIN.fbSelectorA.stSelector.iVici1ReqPos")
+record(longin, "ICL:SDS:SEL:A:Valve:01:ReqPos_RBV") {
+  # GVL_SDS.fbSelectorA.stSelector.iVici1ReqPos
+  field(DESC, "GVL_SDS.fbSelectorA....ctor.iVici1ReqPos")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.stSelector.iVici1ReqPos?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.stSelector.iVici1ReqPos?")
   info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
   info(archive, "VAL")
 }
 
-record(longout, "TST:ICL:SEL:A:Valve:01:ReqPos") {
-  field(DESC, "MAIN.fbSelectorA.stSelector.iVici1ReqPos")
+record(longout, "ICL:SDS:SEL:A:Valve:01:ReqPos") {
+  # GVL_SDS.fbSelectorA.stSelector.iVici1ReqPos
+  field(DESC, "GVL_SDS.fbSelectorA....ctor.iVici1ReqPos")
   field(DTYP, "asynInt32")
   field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.fbSelectorA.stSelector.iVici1ReqPos=")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SDS.fbSelectorA.stSelector.iVici1ReqPos=")
   info(autosaveFields_pass0, "DESC DISS DRVH DRVL HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS VAL")
   info(archive, "VAL")
 }
 
-record(longin, "TST:ICL:SEL:A:Valve:02:ReqPos_RBV") {
-  field(DESC, "MAIN.fbSelectorA.stSelector.iVici2ReqPos")
+record(longin, "ICL:SDS:SEL:A:Valve:02:ReqPos_RBV") {
+  # GVL_SDS.fbSelectorA.stSelector.iVici2ReqPos
+  field(DESC, "GVL_SDS.fbSelectorA....ctor.iVici2ReqPos")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.stSelector.iVici2ReqPos?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.stSelector.iVici2ReqPos?")
   info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
   info(archive, "VAL")
 }
 
-record(longout, "TST:ICL:SEL:A:Valve:02:ReqPos") {
-  field(DESC, "MAIN.fbSelectorA.stSelector.iVici2ReqPos")
+record(longout, "ICL:SDS:SEL:A:Valve:02:ReqPos") {
+  # GVL_SDS.fbSelectorA.stSelector.iVici2ReqPos
+  field(DESC, "GVL_SDS.fbSelectorA....ctor.iVici2ReqPos")
   field(DTYP, "asynInt32")
   field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.fbSelectorA.stSelector.iVici2ReqPos=")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SDS.fbSelectorA.stSelector.iVici2ReqPos=")
   info(autosaveFields_pass0, "DESC DISS DRVH DRVL HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS VAL")
   info(archive, "VAL")
 }
 
-record(ai, "TST:ICL:SEL:A:LiquidSheathFlow_RBV") {
-  field(DESC, "MAIN.fbSelectorA.stSelector.rHighFlow")
+record(ai, "ICL:SDS:SEL:A:LiquidSheathFlow_RBV") {
+  field(DESC, "GVL_SDS.fbSelectorA.stSelector.rHighFlow")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.stSelector.rHighFlow?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.stSelector.rHighFlow?")
   field(PREC, "3")
   info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
   info(archive, "VAL")
 }
 
-record(ai, "TST:ICL:SEL:A:SampleFlow_RBV") {
-  field(DESC, "MAIN.fbSelectorA.stSelector.rLowFlow")
+record(ai, "ICL:SDS:SEL:A:SampleFlow_RBV") {
+  field(DESC, "GVL_SDS.fbSelectorA.stSelector.rLowFlow")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.stSelector.rLowFlow?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.stSelector.rLowFlow?")
   field(PREC, "3")
   info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
   info(archive, "VAL")
 }
 
-record(waveform, "TST:ICL:SEL:A:SampleNames:01_RBV") {
-  # MAIN.fbSelectorA.stSelector.stSampleNames.s1
-  field(DESC, "MAIN.fbSelectorA.stS....stSampleNames.s1")
+record(waveform, "ICL:SDS:SEL:A:SampleNames:01_RBV") {
+  # GVL_SDS.fbSelectorA.stSelector.stSampleNames.s1
+  field(DESC, "GVL_SDS.fbSelectorA.....stSampleNames.s1")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.stSelector.stSampleNames.s1?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.stSelector.stSampleNames.s1?")
   field(FTVL, "CHAR")
   field(NELM, "80")
   field(MPST, "On Change")
@@ -454,14 +470,14 @@ record(waveform, "TST:ICL:SEL:A:SampleNames:01_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "TST:ICL:SEL:A:SampleNames:10_RBV") {
-  # MAIN.fbSelectorA.stSelector.stSampleNames.s10
-  field(DESC, "MAIN.fbSelectorA.stS...stSampleNames.s10")
+record(waveform, "ICL:SDS:SEL:A:SampleNames:10_RBV") {
+  # GVL_SDS.fbSelectorA.stSelector.stSampleNames.s10
+  field(DESC, "GVL_SDS.fbSelectorA....stSampleNames.s10")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.stSelector.stSampleNames.s10?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.stSelector.stSampleNames.s10?")
   field(FTVL, "CHAR")
   field(NELM, "80")
   field(MPST, "On Change")
@@ -470,14 +486,14 @@ record(waveform, "TST:ICL:SEL:A:SampleNames:10_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "TST:ICL:SEL:A:SampleNames:11_RBV") {
-  # MAIN.fbSelectorA.stSelector.stSampleNames.s11
-  field(DESC, "MAIN.fbSelectorA.stS...stSampleNames.s11")
+record(waveform, "ICL:SDS:SEL:A:SampleNames:11_RBV") {
+  # GVL_SDS.fbSelectorA.stSelector.stSampleNames.s11
+  field(DESC, "GVL_SDS.fbSelectorA....stSampleNames.s11")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.stSelector.stSampleNames.s11?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.stSelector.stSampleNames.s11?")
   field(FTVL, "CHAR")
   field(NELM, "80")
   field(MPST, "On Change")
@@ -486,14 +502,14 @@ record(waveform, "TST:ICL:SEL:A:SampleNames:11_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "TST:ICL:SEL:A:SampleNames:12_RBV") {
-  # MAIN.fbSelectorA.stSelector.stSampleNames.s12
-  field(DESC, "MAIN.fbSelectorA.stS...stSampleNames.s12")
+record(waveform, "ICL:SDS:SEL:A:SampleNames:12_RBV") {
+  # GVL_SDS.fbSelectorA.stSelector.stSampleNames.s12
+  field(DESC, "GVL_SDS.fbSelectorA....stSampleNames.s12")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.stSelector.stSampleNames.s12?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.stSelector.stSampleNames.s12?")
   field(FTVL, "CHAR")
   field(NELM, "80")
   field(MPST, "On Change")
@@ -502,14 +518,14 @@ record(waveform, "TST:ICL:SEL:A:SampleNames:12_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "TST:ICL:SEL:A:SampleNames:02_RBV") {
-  # MAIN.fbSelectorA.stSelector.stSampleNames.s2
-  field(DESC, "MAIN.fbSelectorA.stS....stSampleNames.s2")
+record(waveform, "ICL:SDS:SEL:A:SampleNames:02_RBV") {
+  # GVL_SDS.fbSelectorA.stSelector.stSampleNames.s2
+  field(DESC, "GVL_SDS.fbSelectorA.....stSampleNames.s2")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.stSelector.stSampleNames.s2?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.stSelector.stSampleNames.s2?")
   field(FTVL, "CHAR")
   field(NELM, "80")
   field(MPST, "On Change")
@@ -518,14 +534,14 @@ record(waveform, "TST:ICL:SEL:A:SampleNames:02_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "TST:ICL:SEL:A:SampleNames:03_RBV") {
-  # MAIN.fbSelectorA.stSelector.stSampleNames.s3
-  field(DESC, "MAIN.fbSelectorA.stS....stSampleNames.s3")
+record(waveform, "ICL:SDS:SEL:A:SampleNames:03_RBV") {
+  # GVL_SDS.fbSelectorA.stSelector.stSampleNames.s3
+  field(DESC, "GVL_SDS.fbSelectorA.....stSampleNames.s3")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.stSelector.stSampleNames.s3?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.stSelector.stSampleNames.s3?")
   field(FTVL, "CHAR")
   field(NELM, "80")
   field(MPST, "On Change")
@@ -534,14 +550,14 @@ record(waveform, "TST:ICL:SEL:A:SampleNames:03_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "TST:ICL:SEL:A:SampleNames:04_RBV") {
-  # MAIN.fbSelectorA.stSelector.stSampleNames.s4
-  field(DESC, "MAIN.fbSelectorA.stS....stSampleNames.s4")
+record(waveform, "ICL:SDS:SEL:A:SampleNames:04_RBV") {
+  # GVL_SDS.fbSelectorA.stSelector.stSampleNames.s4
+  field(DESC, "GVL_SDS.fbSelectorA.....stSampleNames.s4")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.stSelector.stSampleNames.s4?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.stSelector.stSampleNames.s4?")
   field(FTVL, "CHAR")
   field(NELM, "80")
   field(MPST, "On Change")
@@ -550,14 +566,14 @@ record(waveform, "TST:ICL:SEL:A:SampleNames:04_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "TST:ICL:SEL:A:SampleNames:05_RBV") {
-  # MAIN.fbSelectorA.stSelector.stSampleNames.s5
-  field(DESC, "MAIN.fbSelectorA.stS....stSampleNames.s5")
+record(waveform, "ICL:SDS:SEL:A:SampleNames:05_RBV") {
+  # GVL_SDS.fbSelectorA.stSelector.stSampleNames.s5
+  field(DESC, "GVL_SDS.fbSelectorA.....stSampleNames.s5")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.stSelector.stSampleNames.s5?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.stSelector.stSampleNames.s5?")
   field(FTVL, "CHAR")
   field(NELM, "80")
   field(MPST, "On Change")
@@ -566,14 +582,14 @@ record(waveform, "TST:ICL:SEL:A:SampleNames:05_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "TST:ICL:SEL:A:SampleNames:06_RBV") {
-  # MAIN.fbSelectorA.stSelector.stSampleNames.s6
-  field(DESC, "MAIN.fbSelectorA.stS....stSampleNames.s6")
+record(waveform, "ICL:SDS:SEL:A:SampleNames:06_RBV") {
+  # GVL_SDS.fbSelectorA.stSelector.stSampleNames.s6
+  field(DESC, "GVL_SDS.fbSelectorA.....stSampleNames.s6")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.stSelector.stSampleNames.s6?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.stSelector.stSampleNames.s6?")
   field(FTVL, "CHAR")
   field(NELM, "80")
   field(MPST, "On Change")
@@ -582,14 +598,14 @@ record(waveform, "TST:ICL:SEL:A:SampleNames:06_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "TST:ICL:SEL:A:SampleNames:07_RBV") {
-  # MAIN.fbSelectorA.stSelector.stSampleNames.s7
-  field(DESC, "MAIN.fbSelectorA.stS....stSampleNames.s7")
+record(waveform, "ICL:SDS:SEL:A:SampleNames:07_RBV") {
+  # GVL_SDS.fbSelectorA.stSelector.stSampleNames.s7
+  field(DESC, "GVL_SDS.fbSelectorA.....stSampleNames.s7")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.stSelector.stSampleNames.s7?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.stSelector.stSampleNames.s7?")
   field(FTVL, "CHAR")
   field(NELM, "80")
   field(MPST, "On Change")
@@ -598,14 +614,14 @@ record(waveform, "TST:ICL:SEL:A:SampleNames:07_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "TST:ICL:SEL:A:SampleNames:08_RBV") {
-  # MAIN.fbSelectorA.stSelector.stSampleNames.s8
-  field(DESC, "MAIN.fbSelectorA.stS....stSampleNames.s8")
+record(waveform, "ICL:SDS:SEL:A:SampleNames:08_RBV") {
+  # GVL_SDS.fbSelectorA.stSelector.stSampleNames.s8
+  field(DESC, "GVL_SDS.fbSelectorA.....stSampleNames.s8")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.stSelector.stSampleNames.s8?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.stSelector.stSampleNames.s8?")
   field(FTVL, "CHAR")
   field(NELM, "80")
   field(MPST, "On Change")
@@ -614,14 +630,14 @@ record(waveform, "TST:ICL:SEL:A:SampleNames:08_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "TST:ICL:SEL:A:SampleNames:09_RBV") {
-  # MAIN.fbSelectorA.stSelector.stSampleNames.s9
-  field(DESC, "MAIN.fbSelectorA.stS....stSampleNames.s9")
+record(waveform, "ICL:SDS:SEL:A:SampleNames:09_RBV") {
+  # GVL_SDS.fbSelectorA.stSelector.stSampleNames.s9
+  field(DESC, "GVL_SDS.fbSelectorA.....stSampleNames.s9")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.stSelector.stSampleNames.s9?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.stSelector.stSampleNames.s9?")
   field(FTVL, "CHAR")
   field(NELM, "80")
   field(MPST, "On Change")
@@ -630,274 +646,277 @@ record(waveform, "TST:ICL:SEL:A:SampleNames:09_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "TST:ICL:SEL:A:ValvesLockRequest_RBV") {
-  field(DESC, "MAIN.fbSelectorA.stSelector.xResLock")
+record(bi, "ICL:SDS:SEL:A:ValvesLockRequest_RBV") {
+  field(DESC, "GVL_SDS.fbSelectorA.stSelector.xResLock")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.stSelector.xResLock?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.stSelector.xResLock?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
   info(archive, "VAL")
 }
 
-record(bo, "TST:ICL:SEL:A:ValvesLockRequest") {
-  field(DESC, "MAIN.fbSelectorA.stSelector.xResLock")
+record(bo, "ICL:SDS:SEL:A:ValvesLockRequest") {
+  field(DESC, "GVL_SDS.fbSelectorA.stSelector.xResLock")
   field(DTYP, "asynInt32")
   field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.fbSelectorA.stSelector.xResLock=")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SDS.fbSelectorA.stSelector.xResLock=")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
   info(archive, "VAL")
 }
 
-record(bi, "TST:ICL:SEL:A:ValvesLocked_RBV") {
-  field(DESC, "MAIN.fbSelectorA.stSelector.xResLocked")
+record(bi, "ICL:SDS:SEL:A:ValvesLocked_RBV") {
+  # GVL_SDS.fbSelectorA.stSelector.xResLocked
+  field(DESC, "GVL_SDS.fbSelectorA....lector.xResLocked")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.stSelector.xResLocked?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.stSelector.xResLocked?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
   info(archive, "VAL")
 }
 
-record(bi, "TST:ICL:SEL:A:ValvesSynced_RBV") {
-  field(DESC, "MAIN.fbSelectorA.stSelector.xResSyncd")
+record(bi, "ICL:SDS:SEL:A:ValvesSynced_RBV") {
+  field(DESC, "GVL_SDS.fbSelectorA.stSelector.xResSyncd")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.stSelector.xResSyncd?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.stSelector.xResSyncd?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
   info(archive, "VAL")
 }
 
-record(bi, "TST:ICL:SEL:A:ValvesUnlockRequest_RBV") {
-  field(DESC, "MAIN.fbSelectorA.stSelector.xResUnlock")
+record(bi, "ICL:SDS:SEL:A:ValvesUnlockRequest_RBV") {
+  # GVL_SDS.fbSelectorA.stSelector.xResUnlock
+  field(DESC, "GVL_SDS.fbSelectorA....lector.xResUnlock")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.stSelector.xResUnlock?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.stSelector.xResUnlock?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
   info(archive, "VAL")
 }
 
-record(bo, "TST:ICL:SEL:A:ValvesUnlockRequest") {
-  field(DESC, "MAIN.fbSelectorA.stSelector.xResUnlock")
+record(bo, "ICL:SDS:SEL:A:ValvesUnlockRequest") {
+  # GVL_SDS.fbSelectorA.stSelector.xResUnlock
+  field(DESC, "GVL_SDS.fbSelectorA....lector.xResUnlock")
   field(DTYP, "asynInt32")
   field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.fbSelectorA.stSelector.xResUnlock=")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SDS.fbSelectorA.stSelector.xResUnlock=")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
   info(archive, "VAL")
 }
 
-record(bi, "TST:ICL:SEL:A:Shaker:01:Ctrl_RBV") {
-  field(DESC, "MAIN.fbSelectorA.stShaker01.i_xEpics")
+record(bi, "ICL:SDS:SEL:A:Shaker:01:Ctrl_RBV") {
+  field(DESC, "GVL_SDS.fbSelectorA.stShaker01.i_xEpics")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.stShaker01.i_xEpics?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.stShaker01.i_xEpics?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
   info(archive, "VAL")
 }
 
-record(bo, "TST:ICL:SEL:A:Shaker:01:Ctrl") {
-  field(DESC, "MAIN.fbSelectorA.stShaker01.i_xEpics")
+record(bo, "ICL:SDS:SEL:A:Shaker:01:Ctrl") {
+  field(DESC, "GVL_SDS.fbSelectorA.stShaker01.i_xEpics")
   field(DTYP, "asynInt32")
   field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.fbSelectorA.stShaker01.i_xEpics=")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SDS.fbSelectorA.stShaker01.i_xEpics=")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
   info(archive, "VAL")
 }
 
-record(bi, "TST:ICL:SEL:A:Shaker:01:PowerOn_RBV") {
-  field(DESC, "MAIN.fbSelectorA.stShaker01.q_xPwrDO")
+record(bi, "ICL:SDS:SEL:A:Shaker:01:PowerOn_RBV") {
+  field(DESC, "GVL_SDS.fbSelectorA.stShaker01.q_xPwrDO")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.stShaker01.q_xPwrDO?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.stShaker01.q_xPwrDO?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
   info(archive, "VAL")
 }
 
-record(bi, "TST:ICL:SEL:A:Shaker:01:Ilk_RBV") {
-  field(DESC, "MAIN.fbSelectorA.stShaker01.xIlk")
+record(bi, "ICL:SDS:SEL:A:Shaker:01:Ilk_RBV") {
+  field(DESC, "GVL_SDS.fbSelectorA.stShaker01.xIlk")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.stShaker01.xIlk?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.stShaker01.xIlk?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
   info(archive, "VAL")
 }
 
-record(bi, "TST:ICL:SEL:A:Shaker:02:Ctrl_RBV") {
-  field(DESC, "MAIN.fbSelectorA.stShaker02.i_xEpics")
+record(bi, "ICL:SDS:SEL:A:Shaker:02:Ctrl_RBV") {
+  field(DESC, "GVL_SDS.fbSelectorA.stShaker02.i_xEpics")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.stShaker02.i_xEpics?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.stShaker02.i_xEpics?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
   info(archive, "VAL")
 }
 
-record(bo, "TST:ICL:SEL:A:Shaker:02:Ctrl") {
-  field(DESC, "MAIN.fbSelectorA.stShaker02.i_xEpics")
+record(bo, "ICL:SDS:SEL:A:Shaker:02:Ctrl") {
+  field(DESC, "GVL_SDS.fbSelectorA.stShaker02.i_xEpics")
   field(DTYP, "asynInt32")
   field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.fbSelectorA.stShaker02.i_xEpics=")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SDS.fbSelectorA.stShaker02.i_xEpics=")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
   info(archive, "VAL")
 }
 
-record(bi, "TST:ICL:SEL:A:Shaker:02:PowerOn_RBV") {
-  field(DESC, "MAIN.fbSelectorA.stShaker02.q_xPwrDO")
+record(bi, "ICL:SDS:SEL:A:Shaker:02:PowerOn_RBV") {
+  field(DESC, "GVL_SDS.fbSelectorA.stShaker02.q_xPwrDO")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.stShaker02.q_xPwrDO?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.stShaker02.q_xPwrDO?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
   info(archive, "VAL")
 }
 
-record(bi, "TST:ICL:SEL:A:Shaker:02:Ilk_RBV") {
-  field(DESC, "MAIN.fbSelectorA.stShaker02.xIlk")
+record(bi, "ICL:SDS:SEL:A:Shaker:02:Ilk_RBV") {
+  field(DESC, "GVL_SDS.fbSelectorA.stShaker02.xIlk")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.stShaker02.xIlk?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.stShaker02.xIlk?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
   info(archive, "VAL")
 }
 
-record(bi, "TST:ICL:SEL:A:Shaker:03:Ctrl_RBV") {
-  field(DESC, "MAIN.fbSelectorA.stShaker03.i_xEpics")
+record(bi, "ICL:SDS:SEL:A:Shaker:03:Ctrl_RBV") {
+  field(DESC, "GVL_SDS.fbSelectorA.stShaker03.i_xEpics")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.stShaker03.i_xEpics?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.stShaker03.i_xEpics?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
   info(archive, "VAL")
 }
 
-record(bo, "TST:ICL:SEL:A:Shaker:03:Ctrl") {
-  field(DESC, "MAIN.fbSelectorA.stShaker03.i_xEpics")
+record(bo, "ICL:SDS:SEL:A:Shaker:03:Ctrl") {
+  field(DESC, "GVL_SDS.fbSelectorA.stShaker03.i_xEpics")
   field(DTYP, "asynInt32")
   field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.fbSelectorA.stShaker03.i_xEpics=")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SDS.fbSelectorA.stShaker03.i_xEpics=")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
   info(archive, "VAL")
 }
 
-record(bi, "TST:ICL:SEL:A:Shaker:03:PowerOn_RBV") {
-  field(DESC, "MAIN.fbSelectorA.stShaker03.q_xPwrDO")
+record(bi, "ICL:SDS:SEL:A:Shaker:03:PowerOn_RBV") {
+  field(DESC, "GVL_SDS.fbSelectorA.stShaker03.q_xPwrDO")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.stShaker03.q_xPwrDO?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.stShaker03.q_xPwrDO?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
   info(archive, "VAL")
 }
 
-record(bi, "TST:ICL:SEL:A:Shaker:03:Ilk_RBV") {
-  field(DESC, "MAIN.fbSelectorA.stShaker03.xIlk")
+record(bi, "ICL:SDS:SEL:A:Shaker:03:Ilk_RBV") {
+  field(DESC, "GVL_SDS.fbSelectorA.stShaker03.xIlk")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.stShaker03.xIlk?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.stShaker03.xIlk?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
   info(archive, "VAL")
 }
 
-record(bi, "TST:ICL:SEL:A:Shaker:04:Ctrl_RBV") {
-  field(DESC, "MAIN.fbSelectorA.stShaker04.i_xEpics")
+record(bi, "ICL:SDS:SEL:A:Shaker:04:Ctrl_RBV") {
+  field(DESC, "GVL_SDS.fbSelectorA.stShaker04.i_xEpics")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.stShaker04.i_xEpics?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.stShaker04.i_xEpics?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
   info(archive, "VAL")
 }
 
-record(bo, "TST:ICL:SEL:A:Shaker:04:Ctrl") {
-  field(DESC, "MAIN.fbSelectorA.stShaker04.i_xEpics")
+record(bo, "ICL:SDS:SEL:A:Shaker:04:Ctrl") {
+  field(DESC, "GVL_SDS.fbSelectorA.stShaker04.i_xEpics")
   field(DTYP, "asynInt32")
   field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.fbSelectorA.stShaker04.i_xEpics=")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SDS.fbSelectorA.stShaker04.i_xEpics=")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
   info(archive, "VAL")
 }
 
-record(bi, "TST:ICL:SEL:A:Shaker:04:PowerOn_RBV") {
-  field(DESC, "MAIN.fbSelectorA.stShaker04.q_xPwrDO")
+record(bi, "ICL:SDS:SEL:A:Shaker:04:PowerOn_RBV") {
+  field(DESC, "GVL_SDS.fbSelectorA.stShaker04.q_xPwrDO")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.stShaker04.q_xPwrDO?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.stShaker04.q_xPwrDO?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
   info(archive, "VAL")
 }
 
-record(bi, "TST:ICL:SEL:A:Shaker:04:Ilk_RBV") {
-  field(DESC, "MAIN.fbSelectorA.stShaker04.xIlk")
+record(bi, "ICL:SDS:SEL:A:Shaker:04:Ilk_RBV") {
+  field(DESC, "GVL_SDS.fbSelectorA.stShaker04.xIlk")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbSelectorA.stShaker04.xIlk?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SDS.fbSelectorA.stShaker04.xIlk?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
