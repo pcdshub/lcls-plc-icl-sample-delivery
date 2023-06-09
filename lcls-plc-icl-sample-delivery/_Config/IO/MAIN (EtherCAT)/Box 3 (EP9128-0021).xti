@@ -16,7 +16,7 @@
 			<Name>Term 5 (EP9128-2021)</Name>
 			<ImageId>1000</ImageId>
 			<EtherCAT SlaveType="1" PdiType="#x0d00" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x23a84052" RevisionNo="#x001207e5" PortPhys="4371" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EP9128-2021 8x EtherCAT junction - Dev B" Desc="EP9128-2021" PortABoxInfo="#x02000004"/>
-			<Box File="Box 6 (EP1111).xti" Id="6">
+			<Box File="M3 Selector A (EP1111).xti" Id="6">
 				<EtherCAT PortABoxInfo="#x01000005"/>
 			</Box>
 			<Box File="M3 Selector A Digital IO (EP2338-1001).xti" Id="7">

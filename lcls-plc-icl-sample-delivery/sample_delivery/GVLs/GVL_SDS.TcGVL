@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <GVL Name="GVL_SDS" Id="{233c10f9-ad08-42e0-b3b0-42b6b4ca796a}">
+    <Declaration><![CDATA[VAR_GLOBAL
+    {attribute 'pytmc' := 'pv: ICL:SDS:SEL:A'}
+{attribute 'TcLinkTo' := '.stSensSerial.stComIn.Status := TIIB[M3 Selector A Serial IO (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Status;
+                          .stViciSerial.stComIn.Status := TIIB[M3 Selector A Serial IO (EP6002-0002)]^COM TxPDO-Map Inputs Channel 2^Status;
+                          .stSensSerial.stComOut.Ctrl := TIID^MAIN (EtherCAT)^Box 3 (EP9128-0021)^Term 5 (EP9128-2021)^M3 Selector A Serial IO (EP6002-0002)^COM RxPDO-Map Outputs Channel 1^Ctrl;
+                          .stViciSerial.stComOut.Ctrl := TIID^MAIN (EtherCAT)^Box 3 (EP9128-0021)^Term 5 (EP9128-2021)^M3 Selector A Serial IO (EP6002-0002)^COM RxPDO-Map Outputs Channel 2^Ctrl;
+                          .stShaker01.q_xPwrDO := TIIB[M3 Selector A Digital IO (EP2338-1001)]^Channel 9^Output;
+                          .stShaker02.q_xPwrDO := TIIB[M3 Selector A Digital IO (EP2338-1001)]^Channel 10^Output;
+                          .stShaker03.q_xPwrDO := TIIB[M3 Selector A Digital IO (EP2338-1001)]^Channel 11^Output;
+                          .stShaker04.q_xPwrDO := TIIB[M3 Selector A Digital IO (EP2338-1001)]^Channel 12^Output;
+                          .stBaseIO.i_SyncUnitWC := TIID^MAIN (EtherCAT)^Box 3 (EP9128-0021)^Term 5 (EP9128-2021)^M3 Selector A (EP1111)^WcState^WcState;
+'}
+fbSelectorA : FB_SelectorM3;
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>
