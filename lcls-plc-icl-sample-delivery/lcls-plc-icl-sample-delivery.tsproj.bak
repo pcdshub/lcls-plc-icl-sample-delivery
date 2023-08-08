@@ -1,18 +1,24 @@
-<?xml version="1.0"?>
-<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.35">
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4022.30">
 	<Project ProjectGUID="{CAB661B0-8AFF-428D-AB9B-782737124F76}" TargetNetId="172.21.38.26.1.1" ShowHideConfigurations="#x106">
 		<System>
 			<Tasks>
-				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="350" AdtTasks="true">
+				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="351" AdtTasks="true">
 					<Name>PlcTask</Name>
+				</Task>
+				<Task Id="4" Priority="1" CycleTime="50000" AmsPort="350" AdtTasks="true">
+					<Name>SerialComm</Name>
 				</Task>
 			</Tasks>
 		</System>
 		<Plc>
-			<Project File="Sample-Delivery.xti"/>
+			<Project File="sample_delivery.xti"/>
 		</Plc>
 		<Io>
 			<Device File="MAIN (EtherCAT).xti" Id="1"/>
 		</Io>
 	</Project>
+	<Mappings>
+		<MappingInfo Identifier="{08502001-0010-0304-0020-500810000403}" Id="#x02030010" Watchdog="00000000000000000000000000000000"/>
+	</Mappings>
 </TcSmProject>
