@@ -1,0 +1,62 @@
+Box Hierarchy
+-------------
+
+
+#. **Term 1 (EK1200) [ID: 13]**
+        EK1200-5000 EtherCAT Power supply (2A E-Bus)
+
+    #. Term 24 (EK1110) [ID: 24]
+            EK1110 EtherCAT extension
+
+
+
+
+
+
+#. **SC3 (EP9128-0021) [ID: 20]**
+          (**Disabled**)    EP9128-0021 8x EtherCAT junction
+
+    #. Box 15 (EP9128-1021) [ID: 17]
+            EP9128-1021 8x EtherCAT junction - Dev A
+
+
+
+    #. Box 16 (EP9128-2021) [ID: 18]
+            EP9128-2021 8x EtherCAT junction - Dev B
+
+
+
+
+
+
+#. **SC1 (EP9128-0021) [ID: 28]**
+          (**Disabled**)    EP9128-0021 8x EtherCAT junction
+
+    #. Box 20 (EP9128-1021) [ID: 14]
+            EP9128-1021 8x EtherCAT junction - Dev A
+
+
+
+    #. Box 21 (EP9128-2021) [ID: 25]
+            EP9128-2021 8x EtherCAT junction - Dev B
+
+
+
+
+
+
+#. **SC2 (EP9128-0021) [ID: 31]**
+        EP9128-0021 8x EtherCAT junction
+
+    #. Box 22 (EP9128-1021) [ID: 22]
+            EP9128-1021 8x EtherCAT junction - Dev A
+
+
+
+    #. Box 23 (EP9128-2021) [ID: 23]
+            EP9128-2021 8x EtherCAT junction - Dev B
+
+
+
+
+
