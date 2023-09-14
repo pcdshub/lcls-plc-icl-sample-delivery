@@ -1,13 +1,13 @@
-#!c:/Repos/ads-ioc/R0.6.0///bin/rhel7-x86_64/adsIoc
+#!/reg/g/pcds/epics/ioc/common/ads-ioc/R0.6.1/bin/rhel7-x86_64/adsIoc
 ################### AUTO-GENERATED DO NOT EDIT ###################
 #
 #         Project: lcls-plc-icl-sample-delivery.tsproj
 #        PLC name: sample_delivery (sample_delivery Instance)
-# Generated using: pytmc 2.14.1+0.g20d35b3.dirty
-# Project version: unknown
-#    Project hash: unknown
-#     PLC IP/host: 172.21.38.26
-#      PLC Net ID: 172.21.38.26.1.1
+# Generated using: pytmc 2.15.1
+# Project version: 6192c07
+#    Project hash: 6192c073ab6dccf17076ebfc5fb6d83dad8faeb9
+#     PLC IP/host: plc-sds-raptor (Specified in Makefile; project has: 172.21.38.26)
+#      PLC Net ID: 172.21.38.26.1.1 (Specified in Makefile; project has: 172.21.38.26.1.1)
 # ** DEVELOPMENT MODE IOC **
 # * Using IOC boot directory for autosave.
 # * Archiver settings will not be configured.
@@ -24,8 +24,8 @@
 
 epicsEnvSet("ADS_IOC_TOP", "$(TOP)" )
 
-epicsEnvSet("ENGINEER", "" )
-epicsEnvSet("LOCATION", "PLC:sample_delivery" )
+epicsEnvSet("ENGINEER", "jozamudi" )
+epicsEnvSet("LOCATION", "PLC:ICL:IOC" )
 epicsEnvSet("IOCSH_PS1", "$(IOC)> " )
 epicsEnvSet("ACF_FILE", "$(ADS_IOC_TOP)/iocBoot/templates/unrestricted.acf")
 
@@ -34,17 +34,17 @@ dbLoadDatabase("$(ADS_IOC_TOP)/dbd/adsIoc.dbd")
 adsIoc_registerRecordDeviceDriver(pdbbase)
 
 epicsEnvSet("ASYN_PORT",        "ASYN_PLC")
-epicsEnvSet("IPADDR",           "172.21.38.26")
+epicsEnvSet("IPADDR",           "plc-sds-raptor")
 epicsEnvSet("AMSID",            "172.21.38.26.1.1")
 epicsEnvSet("AMS_PORT",         "851")
-epicsEnvSet("ADS_MAX_PARAMS",   "1070")
+epicsEnvSet("ADS_MAX_PARAMS",   "1453")
 epicsEnvSet("ADS_SAMPLE_MS",    "50")
 epicsEnvSet("ADS_MAX_DELAY_MS", "100")
 epicsEnvSet("ADS_TIMEOUT_MS",   "1000")
 epicsEnvSet("ADS_TIME_SOURCE",  "0")
 
 # Add a route to the PLC automatically:
-system("${ADS_IOC_TOP}/scripts/add_route.sh 172.21.38.26 ^172.*$")
+system("${ADS_IOC_TOP}/scripts/add_route.sh plc-sds-raptor ^172.*")
 
 # adsAsynPortDriverConfigure(portName, ipaddr, amsaddr, amsport,
 #    asynParamTableSize, priority, noAutoConnect, defaultSampleTimeMS,
@@ -74,35 +74,36 @@ adsAsynPortDriverConfigure("$(ASYN_PORT)", "$(IPADDR)", "$(AMSID)", "$(AMS_PORT)
 cd "$(ADS_IOC_TOP)/db"
 
 
-dbLoadRecords("iocSoft.db", "IOC=PLC:sample_delivery")
-dbLoadRecords("save_restoreStatus.db", "P=PLC:sample_delivery:")
+dbLoadRecords("iocSoft.db", "IOC=PLC:ICL:IOC")
+dbLoadRecords("save_restoreStatus.db", "P=PLC:ICL:IOC:")
 dbLoadRecords("caPutLog.db", "IOC=$(IOC)")
 
 ## TwinCAT task, application, and project information databases ##
-dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:sample_delivery,IDX=1")
-dbLoadRecords("TwinCAT_AppInfo.db", "PORT=$(ASYN_PORT), PREFIX=PLC:sample_delivery")
+dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:ICL:IOC,IDX=1")
+dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:ICL:IOC,IDX=2")
+dbLoadRecords("TwinCAT_AppInfo.db", "PORT=$(ASYN_PORT), PREFIX=PLC:ICL:IOC")
 
-dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:sample_delivery,PROJECT=lcls-plc-icl-sample-delivery.tsproj,HASH=unknown,VERSION=unknown,PYTMC=2.14.1+0.g20d35b3.dirty,PLC_HOST=172.21.38.26")
+dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:ICL:IOC,PROJECT=lcls-plc-icl-sample-delivery.tsproj,HASH=6192c07,VERSION=6192c07,PYTMC=2.15.1,PLC_HOST=plc-sds-raptor")
 
 #   lcls-twincat-sample-delivery: * (SLAC)
-dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:sample_delivery,DEPENDENCY=lcls-twincat-sample-delivery,VERSION=*,VENDOR=SLAC")
+dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:ICL:IOC,DEPENDENCY=lcls-twincat-sample-delivery,VERSION=*,VENDOR=SLAC")
 #   Tc2_Standard: * (Beckhoff Automation GmbH)
-dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:sample_delivery,DEPENDENCY=Tc2_Standard,VERSION=*,VENDOR=Beckhoff Automation GmbH")
+dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:ICL:IOC,DEPENDENCY=Tc2_Standard,VERSION=*,VENDOR=Beckhoff Automation GmbH")
 #   Tc2_System: * (Beckhoff Automation GmbH)
-dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:sample_delivery,DEPENDENCY=Tc2_System,VERSION=*,VENDOR=Beckhoff Automation GmbH")
+dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:ICL:IOC,DEPENDENCY=Tc2_System,VERSION=*,VENDOR=Beckhoff Automation GmbH")
 #   Tc3_Module: * (Beckhoff Automation GmbH)
-dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:sample_delivery,DEPENDENCY=Tc3_Module,VERSION=*,VENDOR=Beckhoff Automation GmbH")
+dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:ICL:IOC,DEPENDENCY=Tc3_Module,VERSION=*,VENDOR=Beckhoff Automation GmbH")
 
 cd "$(IOC_TOP)"
 
 ## PLC Project Database files ##
-dbLoadRecords("sample_delivery.db", "PORT=$(ASYN_PORT),PREFIX=PLC:sample_delivery:,IOCNAME=$(IOC),IOC=$(IOC)")
+dbLoadRecords("sample_delivery.db", "PORT=$(ASYN_PORT),PREFIX=PLC:ICL:IOC:,IOCNAME=$(IOC),IOC=$(IOC)")
 
-# Total records: 70
-callbackSetQueueSize(2140)
+# Total records: 453
+callbackSetQueueSize(2906)
 
 # Autosave and archive settings:
-save_restoreSet_status_prefix("PLC:sample_delivery:")
+save_restoreSet_status_prefix("PLC:ICL:IOC:")
 save_restoreSet_IncompleteSetsOk(1)
 save_restoreSet_DatedBackupFiles(1)
 set_pass0_restoreFile("info_positions.sav")
