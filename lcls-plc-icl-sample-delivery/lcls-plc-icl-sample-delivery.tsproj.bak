@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4022.30">
+<?xml version="1.0"?>
+<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.35">
 	<Project ProjectGUID="{CAB661B0-8AFF-428D-AB9B-782737124F76}" TargetNetId="172.21.38.26.1.1" ShowHideConfigurations="#x106">
 		<System>
 			<Tasks>
@@ -19,6 +19,7 @@
 		</Io>
 	</Project>
 	<Mappings>
-		<MappingInfo Identifier="{08502001-0010-0304-0020-500810000403}" Id="#x02030010" Watchdog="00000000000000000000000000000000"/>
+		<MappingInfo Identifier="{00000000-2001-0850-0020-500810000403}" Id="#x02030010"/>
+		<MappingInfo Identifier="{00000000-2002-0850-0120-500831000403}" Id="#x02030020"/>
 	</Mappings>
 </TcSmProject>
