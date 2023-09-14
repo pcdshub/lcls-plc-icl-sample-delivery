@@ -4,8 +4,8 @@
 #         Project: lcls-plc-icl-sample-delivery.tsproj
 #        PLC name: sample_delivery (sample_delivery Instance)
 # Generated using: pytmc 2.15.1
-# Project version: 6192c07
-#    Project hash: 6192c073ab6dccf17076ebfc5fb6d83dad8faeb9
+# Project version: 49a1123
+#    Project hash: 49a1123ad38ac13f973df000d99ca0364eb1b2b5
 #     PLC IP/host: plc-sds-raptor (Specified in Makefile; project has: 172.21.38.26)
 #      PLC Net ID: 172.21.38.26.1.1 (Specified in Makefile; project has: 172.21.38.26.1.1)
 # ** DEVELOPMENT MODE IOC **
@@ -83,7 +83,7 @@ dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:ICL:IOC,IDX=1
 dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:ICL:IOC,IDX=2")
 dbLoadRecords("TwinCAT_AppInfo.db", "PORT=$(ASYN_PORT), PREFIX=PLC:ICL:IOC")
 
-dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:ICL:IOC,PROJECT=lcls-plc-icl-sample-delivery.tsproj,HASH=6192c07,VERSION=6192c07,PYTMC=2.15.1,PLC_HOST=plc-sds-raptor")
+dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:ICL:IOC,PROJECT=lcls-plc-icl-sample-delivery.tsproj,HASH=49a1123,VERSION=49a1123,PYTMC=2.15.1,PLC_HOST=plc-sds-raptor")
 
 #   lcls-twincat-sample-delivery: * (SLAC)
 dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:ICL:IOC,DEPENDENCY=lcls-twincat-sample-delivery,VERSION=*,VENDOR=SLAC")
