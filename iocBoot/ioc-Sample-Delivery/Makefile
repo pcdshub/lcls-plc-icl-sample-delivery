@@ -9,7 +9,7 @@ PROJECT_PATH := ../../lcls-plc-icl-sample-delivery/lcls-plc-icl-sample-delivery.
 PLC := sample_delivery
 
 PYTMC_OPTS :=
-PREFIX := PLC:$(PLC)
+PREFIX := PLC:ICL:IOC
 
 # With two $$, as in $$(IOC) below, this will be expanded in the
 # environment of st.cmd:
