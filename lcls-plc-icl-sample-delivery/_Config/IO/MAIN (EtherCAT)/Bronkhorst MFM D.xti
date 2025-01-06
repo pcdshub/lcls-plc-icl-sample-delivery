@@ -42,8 +42,7 @@
 				<Entry Name="SubIndex 001" Index="#x7402" Sub="#x01">
 					<Type>INT</Type>
 				</Entry>
-				<Entry/>
-				<Entry Name="SubIndex 001" Index="#x6425" Sub="#x01">
+				<Entry Name="SubIndex 001_1" Index="#x6425" Sub="#x01">
 					<Type>USINT</Type>
 				</Entry>
 			</Pdo>

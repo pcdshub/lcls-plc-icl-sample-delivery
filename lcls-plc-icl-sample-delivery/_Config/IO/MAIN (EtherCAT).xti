@@ -205,6 +205,12 @@
 		<Box File="Solenoid Pair A Digital IO (EP2338-0001).xti" Id="8">
 			<EtherCAT PortABoxInfo="#x01000009"/>
 		</Box>
+		<Box File="SC5.xti" Id="36">
+			<EtherCAT PortABoxInfo="#x01000008"/>
+		</Box>
+		<Box File="SC4.xti" Id="1">
+			<EtherCAT PortABoxInfo="#x02000040"/>
+		</Box>
 		<EtherCAT>
 			<SyncUnit Name="[ALI (EP1111)]" HcName="ALI (EP1111)"/>
 			<SyncUnit Name="[Bronkhorst MFM A]" HcName="Bronkhorst MFM A"/>

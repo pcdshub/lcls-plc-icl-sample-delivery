@@ -2,9 +2,9 @@
 <TcLicenseInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2011/11/TcLicenseInfo">
 	<LicenseInfo>
 		<SystemId>{138799A0-0529-6778-580F-F06B1E90D198}</SystemId>
-		<IssueTime>2023-09-14T21:18:00</IssueTime>
-		<ExpireTime>2023-09-22T00:00:00</ExpireTime>
-		<LicenseKey>23370444db90b6ebd04953bf141f14e906137d24d60ed76a80d80f681800aab4cea1e33b8ffe8c73317dc2035859b07141fb179fef3023c245b837d859ce063adbb144798d7ec60e16655f1efc16da112de6ad3b73293f95362770e9ebe9f9b7d16110354f8527e3aae510a6f3286cbd8c813c5c8e033727fb550ae1905b5f8e6dbdefd7fca1f41cd4db90cc4ad9ab993ecf2dc4737753fa576bbba779ebc8ade41a607894c1707f31c388fb5f5e182e13005df130cffb3e3672684489fb6bad70570fa3d4aabafa775f179f4f403d070414628d45fa096a1b580ef06c5f23b3310b69553b275cf03c7fb950ea36c5a63e11678e1aa247ac5af5e7769e473e80</LicenseKey>
+		<IssueTime>2024-12-03T19:27:00</IssueTime>
+		<ExpireTime>2024-12-11T00:00:00</ExpireTime>
+		<LicenseKey>f26ca5fc4240d57bcc18464a90ca7680fd9394f940c04e9c8fd76d62893afbf52cac4512b86a0c4cfa483f2b773c06ad695e6f14c0ab13472b11a71eb6827b76ce682de3f74a8d09c37413c17fe312949378bef8a446290004be250b87c13c281f65bc4e2d85c8f0f6c7b830e0546b3d64223a711c414469f8d316c0982171703de8cb5878f3b22714e706dd235d05abb90f7fa7f933befdc548f2d4f0f9941209dba32d3682baa7c739459bf71910f3d5aa32a56fe8e6fb063aa0734654900bb5c8cb2bda944f80405ae7690cb3134e93b23c64fbc03744d3bcb5c54461afd0060c68fe6532947d1ebd614329428f53f2e696ebfca1c0ed693fcd4ca7b63a40</LicenseKey>
 		<License>
 			<LicenseId>{4C256767-E6E6-4AF5-BD68-9F7ABAD0C200}</LicenseId>
 			<Name>TC3 ADS</Name>
@@ -24,6 +24,11 @@
 			<LicenseId>{BCA6EE0A-9CE1-4D3F-98CA-413ABC0D94FD}</LicenseId>
 			<Name>TC3 Serial-Communication</Name>
 			<OrderNo>TF6340</OrderNo>
+		</License>
+		<License>
+			<LicenseId>{3EBB9639-5FF3-42B6-8847-35C70DC013C8}</LicenseId>
+			<Name>TC3 TCP/IP</Name>
+			<OrderNo>TF6310</OrderNo>
 		</License>
 	</LicenseInfo>
 </TcLicenseInfo>
