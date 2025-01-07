@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{E7AE63DD-C7C7-B009-4500-05FA98F1A159}" GeneratedBy="TwinCAT XAE Plc">
+<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{D28D75A7-B948-4B92-000B-377BE2A0B31A}" GeneratedBy="TwinCAT XAE Plc">
   <DataTypes>
     <DataType>
       <Name Namespace="lcls_twincat_sample_delivery">ST_M3DeviceBaseIO</Name>
@@ -32,7 +32,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
     </DataType>
     <DataType>
       <Name Namespace="lcls_twincat_sample_delivery">ST_ViciControl</Name>
-      <BitSize>704</BitSize>
+      <BitSize>720</BitSize>
       <SubItem>
         <Name>sViciReply</Name>
         <Type>STRING(80)</Type>
@@ -56,6 +56,16 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
         <Type>INT</Type>
         <BitSize>16</BitSize>
         <BitOffs>688</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>iPortCount</Name>
+        <Type>INT</Type>
+        <Comment> Max Number of Ports Supported by Valve</Comment>
+        <BitSize>16</BitSize>
+        <BitOffs>704</BitOffs>
+        <Default>
+          <Value>12</Value>
+        </Default>
       </SubItem>
     </DataType>
     <DataType>
@@ -288,7 +298,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
     </DataType>
     <DataType>
       <Name Namespace="lcls_twincat_sample_delivery">ST_SelectorM3</Name>
-      <BitSize>12032</BitSize>
+      <BitSize>12064</BitSize>
       <SubItem>
         <Name>xResLock</Name>
         <Type>BOOL</Type>
@@ -377,7 +387,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
           <Elements>2</Elements>
         </ArrayInfo>
         <Comment>Hardware control</Comment>
-        <BitSize>1408</BitSize>
+        <BitSize>1440</BitSize>
         <BitOffs>64</BitOffs>
       </SubItem>
       <SubItem>
@@ -385,7 +395,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
         <Type>BOOL</Type>
         <Comment> valve movement is locked</Comment>
         <BitSize>8</BitSize>
-        <BitOffs>1472</BitOffs>
+        <BitOffs>1504</BitOffs>
         <Properties>
           <Property>
             <Name>pytmc</Name>
@@ -401,7 +411,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
         <Type>BOOL</Type>
         <Comment> valves are on the same position</Comment>
         <BitSize>8</BitSize>
-        <BitOffs>1480</BitOffs>
+        <BitOffs>1512</BitOffs>
         <Properties>
           <Property>
             <Name>pytmc</Name>
@@ -416,7 +426,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
         <Name>iSyncResPos</Name>
         <Type>INT</Type>
         <BitSize>16</BitSize>
-        <BitOffs>1488</BitOffs>
+        <BitOffs>1520</BitOffs>
         <Properties>
           <Property>
             <Name>pytmc</Name>
@@ -436,7 +446,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
         </ArrayInfo>
         <Comment>Hardware readbacks</Comment>
         <BitSize>2688</BitSize>
-        <BitOffs>1504</BitOffs>
+        <BitOffs>1536</BitOffs>
         <Properties>
           <Property>
             <Name>pytmc</Name>
@@ -451,7 +461,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
         <Type>REAL</Type>
         <Comment>Sensirion Sample Flowrate</Comment>
         <BitSize>32</BitSize>
-        <BitOffs>4192</BitOffs>
+        <BitOffs>4224</BitOffs>
         <Properties>
           <Property>
             <Name>pytmc</Name>
@@ -467,7 +477,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
         <Type>REAL</Type>
         <Comment>Sensirion Sheath liquid flowrate</Comment>
         <BitSize>32</BitSize>
-        <BitOffs>4224</BitOffs>
+        <BitOffs>4256</BitOffs>
         <Properties>
           <Property>
             <Name>pytmc</Name>
@@ -483,7 +493,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
         <Type Namespace="lcls_twincat_sample_delivery">ST_Strings</Type>
         <Comment> Sample Names</Comment>
         <BitSize>7776</BitSize>
-        <BitOffs>4256</BitOffs>
+        <BitOffs>4288</BitOffs>
         <Properties>
           <Property>
             <Name>pytmc</Name>
@@ -2014,7 +2024,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
     </DataType>
     <DataType>
       <Name Namespace="lcls_twincat_sample_delivery">FB_ViciDriver</Name>
-      <BitSize>191040</BitSize>
+      <BitSize>191072</BitSize>
       <SubItem>
         <Name>i_xExecute</Name>
         <Type>BOOL</Type>
@@ -2047,7 +2057,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
       <SubItem>
         <Name>i_stControl</Name>
         <Type Namespace="lcls_twincat_sample_delivery">ST_ViciControl</Type>
-        <BitSize>704</BitSize>
+        <BitSize>720</BitSize>
         <BitOffs>96</BitOffs>
         <Properties>
           <Property>
@@ -2060,7 +2070,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
         <Name>q_xDone</Name>
         <Type>BOOL</Type>
         <BitSize>8</BitSize>
-        <BitOffs>800</BitOffs>
+        <BitOffs>816</BitOffs>
         <Properties>
           <Property>
             <Name>ItemType</Name>
@@ -2072,7 +2082,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
         <Name>q_xError</Name>
         <Type>BOOL</Type>
         <BitSize>8</BitSize>
-        <BitOffs>808</BitOffs>
+        <BitOffs>824</BitOffs>
         <Properties>
           <Property>
             <Name>ItemType</Name>
@@ -2085,7 +2095,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
         <Type>BOOL</Type>
         <Comment> set in the event of an unexpected reply </Comment>
         <BitSize>8</BitSize>
-        <BitOffs>816</BitOffs>
+        <BitOffs>832</BitOffs>
         <Properties>
           <Property>
             <Name>ItemType</Name>
@@ -2097,7 +2107,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
         <Name>q_xTimeout</Name>
         <Type>BOOL</Type>
         <BitSize>8</BitSize>
-        <BitOffs>824</BitOffs>
+        <BitOffs>840</BitOffs>
         <Properties>
           <Property>
             <Name>ItemType</Name>
@@ -2109,7 +2119,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
         <Name>q_sResult</Name>
         <Type>STRING(255)</Type>
         <BitSize>2048</BitSize>
-        <BitOffs>832</BitOffs>
+        <BitOffs>848</BitOffs>
         <Properties>
           <Property>
             <Name>ItemType</Name>
@@ -2126,7 +2136,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
         </ArrayInfo>
         <Comment> Last String Sent to Serial Device - for debugging </Comment>
         <BitSize>25920</BitSize>
-        <BitOffs>2880</BitOffs>
+        <BitOffs>2896</BitOffs>
         <Properties>
           <Property>
             <Name>ItemType</Name>
@@ -2143,7 +2153,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
         </ArrayInfo>
         <Comment> Last String Received from Serial Device - for debugging </Comment>
         <BitSize>25920</BitSize>
-        <BitOffs>28800</BitOffs>
+        <BitOffs>28816</BitOffs>
         <Properties>
           <Property>
             <Name>ItemType</Name>
@@ -2155,7 +2165,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
         <Name>q_stStatus</Name>
         <Type Namespace="lcls_twincat_sample_delivery">ST_ViciStatus</Type>
         <BitSize>1344</BitSize>
-        <BitOffs>54720</BitOffs>
+        <BitOffs>54736</BitOffs>
         <Properties>
           <Property>
             <Name>ItemType</Name>
@@ -2167,7 +2177,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
         <Name>iq_stSerialRXBuffer</Name>
         <Type Namespace="lcls_twincat_sample_delivery.Tc2_SerialCom" ReferenceTo="true">ComBuffer</Type>
         <BitSize>32</BitSize>
-        <BitOffs>56064</BitOffs>
+        <BitOffs>56096</BitOffs>
         <Properties>
           <Property>
             <Name>ItemType</Name>
@@ -2179,7 +2189,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
         <Name>iq_stSerialTXBuffer</Name>
         <Type Namespace="lcls_twincat_sample_delivery.Tc2_SerialCom" ReferenceTo="true">ComBuffer</Type>
         <BitSize>32</BitSize>
-        <BitOffs>56096</BitOffs>
+        <BitOffs>56128</BitOffs>
         <Properties>
           <Property>
             <Name>ItemType</Name>
@@ -2191,31 +2201,31 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
         <Name>iReqPosReverse</Name>
         <Type>INT</Type>
         <BitSize>16</BitSize>
-        <BitOffs>56128</BitOffs>
+        <BitOffs>56160</BitOffs>
       </SubItem>
       <SubItem>
         <Name>rtExecute</Name>
         <Type Namespace="Tc2_Standard">R_TRIG</Type>
         <BitSize>64</BitSize>
-        <BitOffs>56160</BitOffs>
+        <BitOffs>56192</BitOffs>
       </SubItem>
       <SubItem>
         <Name>iStep</Name>
         <Type>INT</Type>
         <BitSize>16</BitSize>
-        <BitOffs>56224</BitOffs>
+        <BitOffs>56256</BitOffs>
       </SubItem>
       <SubItem>
         <Name>sSendData</Name>
         <Type>STRING(80)</Type>
         <BitSize>648</BitSize>
-        <BitOffs>56240</BitOffs>
+        <BitOffs>56272</BitOffs>
       </SubItem>
       <SubItem>
         <Name>fbViciTransaction</Name>
         <Type Namespace="lcls_twincat_sample_delivery">FB_ViciTransaction</Type>
         <BitSize>91712</BitSize>
-        <BitOffs>56896</BitOffs>
+        <BitOffs>56928</BitOffs>
       </SubItem>
       <SubItem>
         <Name>asReplyFields</Name>
@@ -2227,37 +2237,37 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
         <Comment>fbFormatString			: FB_FormatString;
 fbSplit					: FB_Split255;</Comment>
         <BitSize>40960</BitSize>
-        <BitOffs>148608</BitOffs>
+        <BitOffs>148640</BitOffs>
       </SubItem>
       <SubItem>
         <Name>wChecksum</Name>
         <Type>WORD</Type>
         <BitSize>16</BitSize>
-        <BitOffs>189568</BitOffs>
+        <BitOffs>189600</BitOffs>
       </SubItem>
       <SubItem>
         <Name>rtStartIntegration</Name>
         <Type Namespace="Tc2_Standard">R_TRIG</Type>
         <BitSize>64</BitSize>
-        <BitOffs>189600</BitOffs>
+        <BitOffs>189632</BitOffs>
       </SubItem>
       <SubItem>
         <Name>rtEndReset</Name>
         <Type Namespace="Tc2_Standard">R_TRIG</Type>
         <BitSize>64</BitSize>
-        <BitOffs>189664</BitOffs>
+        <BitOffs>189696</BitOffs>
       </SubItem>
       <SubItem>
         <Name>sWorking</Name>
         <Type>STRING(80)</Type>
         <BitSize>648</BitSize>
-        <BitOffs>189728</BitOffs>
+        <BitOffs>189760</BitOffs>
       </SubItem>
       <SubItem>
         <Name>strResponseExpected</Name>
         <Type>STRING(80)</Type>
         <BitSize>648</BitSize>
-        <BitOffs>190376</BitOffs>
+        <BitOffs>190408</BitOffs>
       </SubItem>
       <Action>
         <Name>_A_ClearStatus</Name>
@@ -4188,7 +4198,7 @@ fbSplit					: FB_Split255;</Comment>
     </DataType>
     <DataType>
       <Name Namespace="lcls_twincat_sample_delivery">FB_SelectorM3</Name>
-      <BitSize>1528128</BitSize>
+      <BitSize>1528224</BitSize>
       <SubItem>
         <Name>stBaseIO</Name>
         <Type Namespace="lcls_twincat_sample_delivery">ST_M3DeviceBaseIO</Type>
@@ -4206,7 +4216,7 @@ fbSplit					: FB_Split255;</Comment>
       <SubItem>
         <Name>stSelector</Name>
         <Type Namespace="lcls_twincat_sample_delivery">ST_SelectorM3</Type>
-        <BitSize>12032</BitSize>
+        <BitSize>12064</BitSize>
         <BitOffs>64</BitOffs>
         <Properties>
           <Property>
@@ -4222,7 +4232,7 @@ fbSplit					: FB_Split255;</Comment>
         <Type Namespace="lcls_twincat_sample_delivery">ST_Shaker</Type>
         <Comment> Shakers</Comment>
         <BitSize>32</BitSize>
-        <BitOffs>12096</BitOffs>
+        <BitOffs>12128</BitOffs>
         <Properties>
           <Property>
             <Name>pytmc</Name>
@@ -4236,7 +4246,7 @@ fbSplit					: FB_Split255;</Comment>
         <Name>stShaker02</Name>
         <Type Namespace="lcls_twincat_sample_delivery">ST_Shaker</Type>
         <BitSize>32</BitSize>
-        <BitOffs>12128</BitOffs>
+        <BitOffs>12160</BitOffs>
         <Properties>
           <Property>
             <Name>pytmc</Name>
@@ -4250,7 +4260,7 @@ fbSplit					: FB_Split255;</Comment>
         <Name>stShaker03</Name>
         <Type Namespace="lcls_twincat_sample_delivery">ST_Shaker</Type>
         <BitSize>32</BitSize>
-        <BitOffs>12160</BitOffs>
+        <BitOffs>12192</BitOffs>
         <Properties>
           <Property>
             <Name>pytmc</Name>
@@ -4264,7 +4274,7 @@ fbSplit					: FB_Split255;</Comment>
         <Name>stShaker04</Name>
         <Type Namespace="lcls_twincat_sample_delivery">ST_Shaker</Type>
         <BitSize>32</BitSize>
-        <BitOffs>12192</BitOffs>
+        <BitOffs>12224</BitOffs>
         <Properties>
           <Property>
             <Name>pytmc</Name>
@@ -4279,7 +4289,7 @@ fbSplit					: FB_Split255;</Comment>
         <Type Namespace="lcls_twincat_sample_delivery">FB_SelectorSync</Type>
         <Comment> Vici valves</Comment>
         <BitSize>544</BitSize>
-        <BitOffs>12224</BitOffs>
+        <BitOffs>12256</BitOffs>
       </SubItem>
       <SubItem>
         <Name>afbViciDriver</Name>
@@ -4288,20 +4298,20 @@ fbSplit					: FB_Split255;</Comment>
           <LBound>1</LBound>
           <Elements>2</Elements>
         </ArrayInfo>
-        <BitSize>382080</BitSize>
-        <BitOffs>12768</BitOffs>
+        <BitSize>382144</BitSize>
+        <BitOffs>12800</BitOffs>
       </SubItem>
       <SubItem>
         <Name>fbViciSerial</Name>
         <Type Namespace="lcls_twincat_sample_delivery">FB_SerialCommWrapper</Type>
         <BitSize>10496</BitSize>
-        <BitOffs>394848</BitOffs>
+        <BitOffs>394944</BitOffs>
       </SubItem>
       <SubItem>
         <Name>stViciSerial</Name>
         <Type Namespace="lcls_twincat_sample_delivery">ST_SerialComm</Type>
         <BitSize>5408</BitSize>
-        <BitOffs>405344</BitOffs>
+        <BitOffs>405440</BitOffs>
       </SubItem>
       <SubItem>
         <Name>astSelFM</Name>
@@ -4312,7 +4322,7 @@ fbSplit					: FB_Split255;</Comment>
         </ArrayInfo>
         <Comment>Address 1 is low flow, address 2 is high flow, low flow is mapped to M2 flow</Comment>
         <BitSize>8576</BitSize>
-        <BitOffs>410752</BitOffs>
+        <BitOffs>410848</BitOffs>
         <Properties>
           <Property>
             <Name>pytmc</Name>
@@ -4330,49 +4340,49 @@ fbSplit					: FB_Split255;</Comment>
           <Elements>2</Elements>
         </ArrayInfo>
         <BitSize>1091904</BitSize>
-        <BitOffs>419328</BitOffs>
+        <BitOffs>419424</BitOffs>
       </SubItem>
       <SubItem>
         <Name>fbSensSerial</Name>
         <Type Namespace="lcls_twincat_sample_delivery">FB_SerialCommWrapper</Type>
         <BitSize>10496</BitSize>
-        <BitOffs>1511232</BitOffs>
+        <BitOffs>1511328</BitOffs>
       </SubItem>
       <SubItem>
         <Name>stSensSerial</Name>
         <Type Namespace="lcls_twincat_sample_delivery">ST_SerialComm</Type>
         <BitSize>5408</BitSize>
-        <BitOffs>1521728</BitOffs>
+        <BitOffs>1521824</BitOffs>
       </SubItem>
       <SubItem>
         <Name>stStatus</Name>
         <Type>STRING(80)</Type>
         <BitSize>648</BitSize>
-        <BitOffs>1527136</BitOffs>
+        <BitOffs>1527232</BitOffs>
       </SubItem>
       <SubItem>
         <Name>udCount</Name>
         <Type>UDINT</Type>
         <BitSize>32</BitSize>
-        <BitOffs>1527808</BitOffs>
+        <BitOffs>1527904</BitOffs>
       </SubItem>
       <SubItem>
         <Name>tofReset</Name>
         <Type Namespace="Tc2_Standard">TOF</Type>
         <BitSize>224</BitSize>
-        <BitOffs>1527840</BitOffs>
+        <BitOffs>1527936</BitOffs>
       </SubItem>
       <SubItem>
         <Name>iIdOld</Name>
         <Type>INT</Type>
         <BitSize>16</BitSize>
-        <BitOffs>1528064</BitOffs>
+        <BitOffs>1528160</BitOffs>
       </SubItem>
       <SubItem>
         <Name>viciIndex</Name>
         <Type>INT</Type>
         <BitSize>16</BitSize>
-        <BitOffs>1528080</BitOffs>
+        <BitOffs>1528176</BitOffs>
         <Default>
           <Value>1</Value>
         </Default>
@@ -4381,7 +4391,7 @@ fbSplit					: FB_Split255;</Comment>
         <Name>fmIndex</Name>
         <Type>INT</Type>
         <BitSize>16</BitSize>
-        <BitOffs>1528096</BitOffs>
+        <BitOffs>1528192</BitOffs>
         <Default>
           <Value>1</Value>
         </Default>
@@ -5180,31 +5190,31 @@ fbSplit					: FB_Split255;</Comment>
         <Name>bBusy</Name>
         <Type>BOOL</Type>
         <BitSize>8</BitSize>
-        <GetCodeOffs>79997488</GetCodeOffs>
+        <GetCodeOffs>79997536</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>bError</Name>
         <Type>BOOL</Type>
         <BitSize>8</BitSize>
-        <GetCodeOffs>79997524</GetCodeOffs>
+        <GetCodeOffs>79997572</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>hrErrorCode</Name>
         <Type GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>79997532</GetCodeOffs>
+        <GetCodeOffs>79997580</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>nStringSize</Name>
         <Type>UDINT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>79997512</GetCodeOffs>
+        <GetCodeOffs>79997560</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>sResult</Name>
         <Type>STRING(255)</Type>
         <BitSize>2048</BitSize>
-        <GetCodeOffs>79997528</GetCodeOffs>
+        <GetCodeOffs>79997576</GetCodeOffs>
         <Properties>
           <Property>
             <Name>TcEncoding</Name>
@@ -6456,15 +6466,15 @@ fbSplit					: FB_Split255;</Comment>
         <Name>nId</Name>
         <Type>UDINT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>79997424</GetCodeOffs>
-        <SetCodeOffs>79997448</SetCodeOffs>
+        <GetCodeOffs>79997472</GetCodeOffs>
+        <SetCodeOffs>79997496</SetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>sName</Name>
         <Type>STRING(255)</Type>
         <BitSize>2048</BitSize>
-        <GetCodeOffs>79997464</GetCodeOffs>
-        <SetCodeOffs>79997476</SetCodeOffs>
+        <GetCodeOffs>79997512</GetCodeOffs>
+        <SetCodeOffs>79997524</SetCodeOffs>
         <Properties>
           <Property>
             <Name>TcEncoding</Name>
@@ -6705,31 +6715,31 @@ fbSplit					: FB_Split255;</Comment>
         <Name>eSeverity</Name>
         <Type GUID="{B57D3F4A-0836-49B0-81C3-BED5F4817EC9}">TcEventSeverity</Type>
         <BitSize>16</BitSize>
-        <GetCodeOffs>79997580</GetCodeOffs>
+        <GetCodeOffs>79997628</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>ipSourceInfo</Name>
         <Type Namespace="lcls_twincat_sample_delivery.LCLS_General.Tc3_EventLogger">I_TcSourceInfo</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>79997560</GetCodeOffs>
+        <GetCodeOffs>79997608</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>nEventId</Name>
         <Type>UDINT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>79997648</GetCodeOffs>
+        <GetCodeOffs>79997696</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>nUniqueId</Name>
         <Type>UDINT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>79997652</GetCodeOffs>
+        <GetCodeOffs>79997700</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>sEventClassName</Name>
         <Type>STRING(255)</Type>
         <BitSize>2048</BitSize>
-        <GetCodeOffs>79997608</GetCodeOffs>
+        <GetCodeOffs>79997656</GetCodeOffs>
         <Properties>
           <Property>
             <Name>TcEncoding</Name>
@@ -6741,7 +6751,7 @@ fbSplit					: FB_Split255;</Comment>
         <Name>sEventText</Name>
         <Type>STRING(255)</Type>
         <BitSize>2048</BitSize>
-        <GetCodeOffs>79997656</GetCodeOffs>
+        <GetCodeOffs>79997704</GetCodeOffs>
         <Properties>
           <Property>
             <Name>TcEncoding</Name>
@@ -7334,7 +7344,7 @@ fbSplit					: FB_Split255;</Comment>
         <Name>nTimeSent</Name>
         <Type>ULINT</Type>
         <BitSize>64</BitSize>
-        <GetCodeOffs>79997684</GetCodeOffs>
+        <GetCodeOffs>79997732</GetCodeOffs>
         <Properties>
           <Property>
             <Name>TcDisplayTypeGUID</Name>
@@ -17963,7 +17973,7 @@ fbSplit					: FB_Split255;</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>634005056</BitOffs>
+            <BitOffs>634005152</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.M3SelectorA.stSensSerial.stComIn</Name>
@@ -17975,7 +17985,7 @@ fbSplit					: FB_Split255;</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635121440</BitOffs>
+            <BitOffs>635121536</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.M3SelectorB.stViciSerial.stComIn</Name>
@@ -17987,7 +17997,7 @@ fbSplit					: FB_Split255;</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635533184</BitOffs>
+            <BitOffs>635533376</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.M3SelectorB.stSensSerial.stComIn</Name>
@@ -17999,7 +18009,7 @@ fbSplit					: FB_Split255;</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>636649568</BitOffs>
+            <BitOffs>636649760</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.M3SelectorC.stViciSerial.stComIn</Name>
@@ -18011,7 +18021,7 @@ fbSplit					: FB_Split255;</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637061312</BitOffs>
+            <BitOffs>637061600</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.M3SelectorC.stSensSerial.stComIn</Name>
@@ -18023,7 +18033,7 @@ fbSplit					: FB_Split255;</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>638177696</BitOffs>
+            <BitOffs>638177984</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.M3SelectorD.stViciSerial.stComIn</Name>
@@ -18035,7 +18045,7 @@ fbSplit					: FB_Split255;</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>638589440</BitOffs>
+            <BitOffs>638589824</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.M3SelectorD.stSensSerial.stComIn</Name>
@@ -18047,7 +18057,7 @@ fbSplit					: FB_Split255;</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639705824</BitOffs>
+            <BitOffs>639706208</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.PCMA.stSerial1.stComIn</Name>
@@ -18059,7 +18069,7 @@ fbSplit					: FB_Split255;</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639712272</BitOffs>
+            <BitOffs>639712656</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.PCMA.stSerial2.stComIn</Name>
@@ -18071,7 +18081,7 @@ fbSplit					: FB_Split255;</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639717680</BitOffs>
+            <BitOffs>639718064</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.PCMB.stSerial1.stComIn</Name>
@@ -18083,7 +18093,7 @@ fbSplit					: FB_Split255;</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639744528</BitOffs>
+            <BitOffs>639744912</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.PCMB.stSerial2.stComIn</Name>
@@ -18095,7 +18105,7 @@ fbSplit					: FB_Split255;</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639749936</BitOffs>
+            <BitOffs>639750320</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.PCMC.stSerial2.stComIn</Name>
@@ -18107,7 +18117,7 @@ fbSplit					: FB_Split255;</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639782192</BitOffs>
+            <BitOffs>639782576</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.PCMC.stSerial1.stComIn</Name>
@@ -18119,7 +18129,7 @@ fbSplit					: FB_Split255;</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639776784</BitOffs>
+            <BitOffs>639777168</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.PCMD.stSerial1.stComIn</Name>
@@ -18131,7 +18141,7 @@ fbSplit					: FB_Split255;</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639809040</BitOffs>
+            <BitOffs>639809424</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.PCMD.stSerial2.stComIn</Name>
@@ -18143,7 +18153,7 @@ fbSplit					: FB_Split255;</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639814448</BitOffs>
+            <BitOffs>639814832</BitOffs>
           </Symbol>
         </DataArea>
         <DataArea>
@@ -18161,7 +18171,7 @@ fbSplit					: FB_Split255;</Comment>
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>634005248</BitOffs>
+            <BitOffs>634005344</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.M3SelectorA.stSensSerial.stComOut</Name>
@@ -18173,7 +18183,7 @@ fbSplit					: FB_Split255;</Comment>
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>635121632</BitOffs>
+            <BitOffs>635121728</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.M3SelectorD.stViciSerial.stComOut</Name>
@@ -18185,7 +18195,7 @@ fbSplit					: FB_Split255;</Comment>
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>638589632</BitOffs>
+            <BitOffs>638590016</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.M3SelectorD.stSensSerial.stComOut</Name>
@@ -18197,7 +18207,7 @@ fbSplit					: FB_Split255;</Comment>
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>639706016</BitOffs>
+            <BitOffs>639706400</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.PCMB.stSerial2.stComOut</Name>
@@ -18209,7 +18219,7 @@ fbSplit					: FB_Split255;</Comment>
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>639750128</BitOffs>
+            <BitOffs>639750512</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.M3SelectorB.stViciSerial.stComOut</Name>
@@ -18221,7 +18231,7 @@ fbSplit					: FB_Split255;</Comment>
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>635533376</BitOffs>
+            <BitOffs>635533568</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.M3SelectorB.stSensSerial.stComOut</Name>
@@ -18233,7 +18243,7 @@ fbSplit					: FB_Split255;</Comment>
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>636649760</BitOffs>
+            <BitOffs>636649952</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.M3SelectorC.stViciSerial.stComOut</Name>
@@ -18245,7 +18255,7 @@ fbSplit					: FB_Split255;</Comment>
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>637061504</BitOffs>
+            <BitOffs>637061792</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.M3SelectorC.stSensSerial.stComOut</Name>
@@ -18257,7 +18267,7 @@ fbSplit					: FB_Split255;</Comment>
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>638177888</BitOffs>
+            <BitOffs>638178176</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.PCMA.stSerial1.stComOut</Name>
@@ -18269,7 +18279,7 @@ fbSplit					: FB_Split255;</Comment>
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>639712464</BitOffs>
+            <BitOffs>639712848</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.PCMA.stSerial2.stComOut</Name>
@@ -18281,7 +18291,7 @@ fbSplit					: FB_Split255;</Comment>
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>639717872</BitOffs>
+            <BitOffs>639718256</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.PCMB.stSerial1.stComOut</Name>
@@ -18293,7 +18303,7 @@ fbSplit					: FB_Split255;</Comment>
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>639744720</BitOffs>
+            <BitOffs>639745104</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.PCMC.stSerial1.stComOut</Name>
@@ -18305,7 +18315,7 @@ fbSplit					: FB_Split255;</Comment>
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>639776976</BitOffs>
+            <BitOffs>639777360</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.PCMC.stSerial2.stComOut</Name>
@@ -18317,7 +18327,7 @@ fbSplit					: FB_Split255;</Comment>
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>639782384</BitOffs>
+            <BitOffs>639782768</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.PCMD.stSerial1.stComOut</Name>
@@ -18329,7 +18339,7 @@ fbSplit					: FB_Split255;</Comment>
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>639809232</BitOffs>
+            <BitOffs>639809616</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.PCMD.stSerial2.stComOut</Name>
@@ -18341,7 +18351,7 @@ fbSplit					: FB_Split255;</Comment>
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>639814640</BitOffs>
+            <BitOffs>639815024</BitOffs>
           </Symbol>
         </DataArea>
         <DataArea>
@@ -18351,7 +18361,7 @@ fbSplit					: FB_Split255;</Comment>
           <ByteSize>80478208</ByteSize>
           <Symbol>
             <Name>GVL_SDS.M3SelectorA</Name>
-            <BitSize>1528128</BitSize>
+            <BitSize>1528224</BitSize>
             <BaseType Namespace="lcls_twincat_sample_delivery">FB_SelectorM3</BaseType>
             <Properties>
               <Property>
@@ -18379,7 +18389,7 @@ fbSplit					: FB_Split255;</Comment>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.M3SelectorB</Name>
-            <BitSize>1528128</BitSize>
+            <BitSize>1528224</BitSize>
             <BaseType Namespace="lcls_twincat_sample_delivery">FB_SelectorM3</BaseType>
             <Properties>
               <Property>
@@ -18403,11 +18413,11 @@ fbSplit					: FB_Split255;</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>635122816</BitOffs>
+            <BitOffs>635122912</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.M3SelectorC</Name>
-            <BitSize>1528128</BitSize>
+            <BitSize>1528224</BitSize>
             <BaseType Namespace="lcls_twincat_sample_delivery">FB_SelectorM3</BaseType>
             <Properties>
               <Property>
@@ -18431,11 +18441,11 @@ fbSplit					: FB_Split255;</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>636650944</BitOffs>
+            <BitOffs>636651136</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.M3SelectorD</Name>
-            <BitSize>1528128</BitSize>
+            <BitSize>1528224</BitSize>
             <BaseType Namespace="lcls_twincat_sample_delivery">FB_SelectorM3</BaseType>
             <Properties>
               <Property>
@@ -18459,7 +18469,7 @@ fbSplit					: FB_Split255;</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>638179072</BitOffs>
+            <BitOffs>638179360</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.PCMA</Name>
@@ -18487,7 +18497,7 @@ fbSplit					: FB_Split255;</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>639707200</BitOffs>
+            <BitOffs>639707584</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.PCMB</Name>
@@ -18516,7 +18526,7 @@ fbSplit					: FB_Split255;</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>639739456</BitOffs>
+            <BitOffs>639739840</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.PCMC</Name>
@@ -18544,7 +18554,7 @@ fbSplit					: FB_Split255;</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>639771712</BitOffs>
+            <BitOffs>639772096</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.PCMD</Name>
@@ -18572,7 +18582,7 @@ fbSplit					: FB_Split255;</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>639803968</BitOffs>
+            <BitOffs>639804352</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList._AppInfo</Name>
@@ -18586,7 +18596,7 @@ fbSplit					: FB_Split255;</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>639846048</BitOffs>
+            <BitOffs>639846432</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList._TaskPouOid_SerialComm</Name>
@@ -18600,7 +18610,7 @@ fbSplit					: FB_Split255;</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>639848096</BitOffs>
+            <BitOffs>639848480</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList._TaskOid_SerialComm</Name>
@@ -18614,7 +18624,7 @@ fbSplit					: FB_Split255;</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>639850176</BitOffs>
+            <BitOffs>639850560</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList.__SerialComm</Name>
@@ -18635,7 +18645,7 @@ fbSplit					: FB_Split255;</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>639850272</BitOffs>
+            <BitOffs>639850656</BitOffs>
           </Symbol>
         </DataArea>
         <DataArea>
@@ -18691,7 +18701,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635122848</BitOffs>
+            <BitOffs>635122944</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.M3SelectorC.stBaseIO.i_SyncUnitWC</Name>
@@ -18716,7 +18726,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>636650976</BitOffs>
+            <BitOffs>636651168</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.M3SelectorD.stBaseIO.i_SyncUnitWC</Name>
@@ -18741,7 +18751,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>638179104</BitOffs>
+            <BitOffs>638179392</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.PCMA.stBaseIO.i_SyncUnitWC</Name>
@@ -18766,7 +18776,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639707232</BitOffs>
+            <BitOffs>639707616</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.PCMA.stPropAir1.i_iPressRB</Name>
@@ -18782,7 +18792,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639739168</BitOffs>
+            <BitOffs>639739552</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.PCMA.stPropAir2.i_iPressRB</Name>
@@ -18798,7 +18808,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639739296</BitOffs>
+            <BitOffs>639739680</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.PCMB.stBaseIO.i_SyncUnitWC</Name>
@@ -18823,7 +18833,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639739488</BitOffs>
+            <BitOffs>639739872</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.PCMB.stPropAir1.i_iPressRB</Name>
@@ -18839,7 +18849,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639771424</BitOffs>
+            <BitOffs>639771808</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.PCMB.stPropAir2.i_iPressRB</Name>
@@ -18855,7 +18865,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639771552</BitOffs>
+            <BitOffs>639771936</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.PCMC.stBaseIO.i_SyncUnitWC</Name>
@@ -18880,7 +18890,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639771744</BitOffs>
+            <BitOffs>639772128</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.PCMC.stPropAir1.i_iPressRB</Name>
@@ -18896,7 +18906,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639803680</BitOffs>
+            <BitOffs>639804064</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.PCMC.stPropAir2.i_iPressRB</Name>
@@ -18912,7 +18922,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639803808</BitOffs>
+            <BitOffs>639804192</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.PCMD.stBaseIO.i_SyncUnitWC</Name>
@@ -18937,7 +18947,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639804000</BitOffs>
+            <BitOffs>639804384</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.PCMD.stPropAir1.i_iPressRB</Name>
@@ -18953,7 +18963,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639835936</BitOffs>
+            <BitOffs>639836320</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.PCMD.stPropAir2.i_iPressRB</Name>
@@ -18969,7 +18979,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639836064</BitOffs>
+            <BitOffs>639836448</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.GasMan.stBaseIO.i_SyncUnitWC</Name>
@@ -18994,7 +19004,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639836256</BitOffs>
+            <BitOffs>639836640</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.GasMan.stValve[1].ixOPN</Name>
@@ -19014,7 +19024,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639836280</BitOffs>
+            <BitOffs>639836664</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.GasMan.stValve[2].ixOPN</Name>
@@ -19034,7 +19044,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639836960</BitOffs>
+            <BitOffs>639837344</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.GasMan.stValve[3].ixOPN</Name>
@@ -19054,7 +19064,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639837640</BitOffs>
+            <BitOffs>639838024</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.GasMan.stValve[4].ixOPN</Name>
@@ -19074,7 +19084,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639838320</BitOffs>
+            <BitOffs>639838704</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.GasMan.stValve[5].ixOPN</Name>
@@ -19094,7 +19104,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639839000</BitOffs>
+            <BitOffs>639839384</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.GasMan.stValve[6].ixOPN</Name>
@@ -19114,7 +19124,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639839680</BitOffs>
+            <BitOffs>639840064</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.GasMan.stValve[7].ixOPN</Name>
@@ -19134,7 +19144,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639840360</BitOffs>
+            <BitOffs>639840744</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.BronkhorstA.stMFM.i_sUnit</Name>
@@ -19153,7 +19163,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639841552</BitOffs>
+            <BitOffs>639841936</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.BronkhorstA.stMFM.i_rFlow</Name>
@@ -19172,7 +19182,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639842240</BitOffs>
+            <BitOffs>639842624</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.BronkhorstB.stMFM.i_sUnit</Name>
@@ -19191,7 +19201,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639842352</BitOffs>
+            <BitOffs>639842736</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.BronkhorstB.stMFM.i_rFlow</Name>
@@ -19210,7 +19220,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639843040</BitOffs>
+            <BitOffs>639843424</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.BronkhorstC.stMFM.i_sUnit</Name>
@@ -19229,7 +19239,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639843152</BitOffs>
+            <BitOffs>639843536</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.BronkhorstC.stMFM.i_rFlow</Name>
@@ -19248,7 +19258,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639843840</BitOffs>
+            <BitOffs>639844224</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.BronkhorstD.stMFM.i_sUnit</Name>
@@ -19267,7 +19277,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639843952</BitOffs>
+            <BitOffs>639844336</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.BronkhorstD.stMFM.i_rFlow</Name>
@@ -19286,7 +19296,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639844640</BitOffs>
+            <BitOffs>639845024</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.SolenoidPairA.i_xEpics</Name>
@@ -19306,7 +19316,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639844752</BitOffs>
+            <BitOffs>639845136</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.SolenoidPairA.i_xDebug</Name>
@@ -19326,7 +19336,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639844760</BitOffs>
+            <BitOffs>639845144</BitOffs>
           </Symbol>
         </DataArea>
         <DataArea>
@@ -19351,7 +19361,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>633606784</BitOffs>
+            <BitOffs>633606816</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.M3SelectorA.stShaker02.q_xPwrDO</Name>
@@ -19370,7 +19380,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>633606816</BitOffs>
+            <BitOffs>633606848</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.M3SelectorA.stShaker03.q_xPwrDO</Name>
@@ -19389,7 +19399,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>633606848</BitOffs>
+            <BitOffs>633606880</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.M3SelectorA.stShaker04.q_xPwrDO</Name>
@@ -19408,7 +19418,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>633606880</BitOffs>
+            <BitOffs>633606912</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.M3SelectorB.stShaker01.q_xPwrDO</Name>
@@ -19427,7 +19437,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>635134912</BitOffs>
+            <BitOffs>635135040</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.M3SelectorB.stShaker02.q_xPwrDO</Name>
@@ -19446,7 +19456,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>635134944</BitOffs>
+            <BitOffs>635135072</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.M3SelectorB.stShaker03.q_xPwrDO</Name>
@@ -19465,7 +19475,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>635134976</BitOffs>
+            <BitOffs>635135104</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.M3SelectorB.stShaker04.q_xPwrDO</Name>
@@ -19484,7 +19494,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>635135008</BitOffs>
+            <BitOffs>635135136</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.M3SelectorC.stShaker01.q_xPwrDO</Name>
@@ -19503,7 +19513,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>636663040</BitOffs>
+            <BitOffs>636663264</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.M3SelectorC.stShaker02.q_xPwrDO</Name>
@@ -19522,7 +19532,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>636663072</BitOffs>
+            <BitOffs>636663296</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.M3SelectorC.stShaker03.q_xPwrDO</Name>
@@ -19541,7 +19551,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>636663104</BitOffs>
+            <BitOffs>636663328</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.M3SelectorC.stShaker04.q_xPwrDO</Name>
@@ -19560,7 +19570,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>636663136</BitOffs>
+            <BitOffs>636663360</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.M3SelectorD.stShaker01.q_xPwrDO</Name>
@@ -19579,7 +19589,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>638191168</BitOffs>
+            <BitOffs>638191488</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.M3SelectorD.stShaker02.q_xPwrDO</Name>
@@ -19598,7 +19608,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>638191200</BitOffs>
+            <BitOffs>638191520</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.M3SelectorD.stShaker03.q_xPwrDO</Name>
@@ -19617,7 +19627,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>638191232</BitOffs>
+            <BitOffs>638191552</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.M3SelectorD.stShaker04.q_xPwrDO</Name>
@@ -19636,7 +19646,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>638191264</BitOffs>
+            <BitOffs>638191584</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.PCMA.stPropAir1.q_iPressCt</Name>
@@ -19652,7 +19662,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>639739184</BitOffs>
+            <BitOffs>639739568</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.PCMA.stPropAir2.q_iPressCt</Name>
@@ -19668,7 +19678,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>639739312</BitOffs>
+            <BitOffs>639739696</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.PCMB.stPropAir1.q_iPressCt</Name>
@@ -19684,7 +19694,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>639771440</BitOffs>
+            <BitOffs>639771824</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.PCMB.stPropAir2.q_iPressCt</Name>
@@ -19700,7 +19710,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>639771568</BitOffs>
+            <BitOffs>639771952</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.PCMC.stPropAir1.q_iPressCt</Name>
@@ -19716,7 +19726,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>639803696</BitOffs>
+            <BitOffs>639804080</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.PCMC.stPropAir2.q_iPressCt</Name>
@@ -19732,7 +19742,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>639803824</BitOffs>
+            <BitOffs>639804208</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.PCMD.stPropAir1.q_iPressCt</Name>
@@ -19748,7 +19758,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>639835952</BitOffs>
+            <BitOffs>639836336</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.PCMD.stPropAir2.q_iPressCt</Name>
@@ -19764,7 +19774,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>639836080</BitOffs>
+            <BitOffs>639836464</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.GasMan.stValve[1].qxDO</Name>
@@ -19784,7 +19794,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>639836272</BitOffs>
+            <BitOffs>639836656</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.GasMan.stValve[2].qxDO</Name>
@@ -19804,7 +19814,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>639836952</BitOffs>
+            <BitOffs>639837336</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.GasMan.stValve[3].qxDO</Name>
@@ -19824,7 +19834,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>639837632</BitOffs>
+            <BitOffs>639838016</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.GasMan.stValve[4].qxDO</Name>
@@ -19844,7 +19854,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>639838312</BitOffs>
+            <BitOffs>639838696</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.GasMan.stValve[5].qxDO</Name>
@@ -19864,7 +19874,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>639838992</BitOffs>
+            <BitOffs>639839376</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.GasMan.stValve[6].qxDO</Name>
@@ -19884,7 +19894,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>639839672</BitOffs>
+            <BitOffs>639840056</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.GasMan.stValve[7].qxDO</Name>
@@ -19904,7 +19914,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>639840352</BitOffs>
+            <BitOffs>639840736</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.BronkhorstA.stMFM.q_rSetpoint</Name>
@@ -19923,7 +19933,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>639842272</BitOffs>
+            <BitOffs>639842656</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.BronkhorstB.stMFM.q_rSetpoint</Name>
@@ -19942,7 +19952,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>639843072</BitOffs>
+            <BitOffs>639843456</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.BronkhorstC.stMFM.q_rSetpoint</Name>
@@ -19961,7 +19971,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>639843872</BitOffs>
+            <BitOffs>639844256</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.BronkhorstD.stMFM.q_rSetpoint</Name>
@@ -19980,7 +19990,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>639844672</BitOffs>
+            <BitOffs>639845056</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.SolenoidPairA.q_xDO1</Name>
@@ -19999,7 +20009,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>639844736</BitOffs>
+            <BitOffs>639845120</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.SolenoidPairA.q_xDO2</Name>
@@ -20018,7 +20028,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>639844744</BitOffs>
+            <BitOffs>639845128</BitOffs>
           </Symbol>
         </DataArea>
         <DataArea>
@@ -25595,7 +25605,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>639836224</BitOffs>
+            <BitOffs>639836608</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.BronkhorstA</Name>
@@ -25616,7 +25626,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>639841504</BitOffs>
+            <BitOffs>639841888</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.BronkhorstB</Name>
@@ -25637,7 +25647,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>639842304</BitOffs>
+            <BitOffs>639842688</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.BronkhorstC</Name>
@@ -25658,7 +25668,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>639843104</BitOffs>
+            <BitOffs>639843488</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.BronkhorstD</Name>
@@ -25679,7 +25689,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>639843904</BitOffs>
+            <BitOffs>639844288</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SDS.SolenoidPairA</Name>
@@ -25700,7 +25710,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>639844704</BitOffs>
+            <BitOffs>639845088</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.RuntimeVersion</Name>
@@ -25730,7 +25740,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>639844768</BitOffs>
+            <BitOffs>639845152</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.CompilerVersion</Name>
@@ -25760,7 +25770,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>639844832</BitOffs>
+            <BitOffs>639845216</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.bSimulationMode</Name>
@@ -25775,7 +25785,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>639844896</BitOffs>
+            <BitOffs>639845280</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.bFPUSupport</Name>
@@ -25790,7 +25800,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>639844904</BitOffs>
+            <BitOffs>639845288</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.nRegisterSize</Name>
@@ -25805,7 +25815,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>639844912</BitOffs>
+            <BitOffs>639845296</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.nPackMode</Name>
@@ -25820,7 +25830,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>639844928</BitOffs>
+            <BitOffs>639845312</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.bMulticoreSupport</Name>
@@ -25834,7 +25844,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>639844944</BitOffs>
+            <BitOffs>639845328</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.RuntimeVersionNumeric</Name>
@@ -25849,7 +25859,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>639844960</BitOffs>
+            <BitOffs>639845344</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.CompilerVersionNumeric</Name>
@@ -25864,7 +25874,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>639844992</BitOffs>
+            <BitOffs>639845376</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_LicenseInfoVarList._LicenseInfo</Name>
@@ -25933,7 +25943,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>639845024</BitOffs>
+            <BitOffs>639845408</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList._TaskInfo</Name>
@@ -25951,7 +25961,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>639848128</BitOffs>
+            <BitOffs>639848512</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList._TaskPouOid_PlcTask</Name>
@@ -25965,7 +25975,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>639850208</BitOffs>
+            <BitOffs>639850592</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList._TaskOid_PlcTask</Name>
@@ -25979,7 +25989,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>639850240</BitOffs>
+            <BitOffs>639850624</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList.__PlcTask</Name>
@@ -26000,7 +26010,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>639850976</BitOffs>
+            <BitOffs>639851360</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TC_EVENTS.LCLSGeneralEventClass</Name>
@@ -26026,7 +26036,7 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>639902496</BitOffs>
+            <BitOffs>639902880</BitOffs>
           </Symbol>
         </DataArea>
       </DataAreas>
@@ -26043,11 +26053,11 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive</Co
         </Property>
         <Property>
           <Name>ChangeDate</Name>
-          <Value>2024-12-03T12:13:06</Value>
+          <Value>2025-01-07T08:54:04</Value>
         </Property>
         <Property>
           <Name>GeneratedCodeSize</Name>
-          <Value>401408</Value>
+          <Value>397312</Value>
         </Property>
         <Property>
           <Name>GlobalDataSize</Name>

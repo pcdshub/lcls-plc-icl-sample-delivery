@@ -53,7 +53,7 @@
 		</DataType>
 	</DataTypes>
 	<Project GUID="{D3F54924-9309-41B8-AD79-712278992990}" Name="sample_delivery" PrjFilePath="..\..\sample_delivery\sample_delivery.plcproj" TmcFilePath="..\..\sample_delivery\sample_delivery.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="sample_delivery\sample_delivery.tmc" TmcHash="{E7AE63DD-C7C7-B009-4500-05FA98F1A159}">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="sample_delivery\sample_delivery.tmc" TmcHash="{D28D75A7-B948-4B92-000B-377BE2A0B31A}">
 			<Name>sample_delivery Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">
